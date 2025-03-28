@@ -1,0 +1,87 @@
+/* ============================
+   Custom Height Classes
+============================ */
+
+/* Height in vh */
+.h-0vh {
+    height: 0vh;
+}
+.h-10vh {
+    height: 10vh;
+}
+.h-20vh {
+    height: 20vh;
+}
+.h-30vh {
+    height: 30vh;
+}
+.h-40vh {
+    height: 40vh;
+}
+.h-50vh {
+    height: 50vh;
+}
+.h-60vh {
+    height: 60vh;
+}
+.h-75vh {
+    height: 75vh;
+}
+.h-80vh {
+    height: 80vh;
+}
+.h-90vh {
+    height: 90vh;
+}
+.h-100vh {
+    height: 100vh;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*Moving BackGround Animation*/
+.bg-tile-animation-LeftDown {
+    background-repeat: repeat;
+    background-size: auto; /* Maintain original tiling */
+    animation: scrollBackgroundLeftDown 20s linear infinite;
+}
+
+@keyframes scrollBackgroundLeftDown {
+    0% {
+        background-position: 500px 0;
+    }
+    100% {
+        background-position: 0 500px; /* Control scroll speed and direction */
+    }
+}
+/*Moving BackGround Animation*/
+.bg-tile-animation-RightDown {
+    background-repeat: repeat;
+    background-size: auto; /* Maintain original tiling */
+    animation: scrollBackgroundRightDown 20s linear infinite;
+}
+
+@keyframes scrollBackgroundRightDown {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 500px 500px; /* Control scroll speed and direction */
+    }
+}
+/*Moving BackGround Animation*/
+.bg-tile-animation-ZigZag {
+    background-repeat: repeat;
+    background-size: auto; /* Maintain original tiling */
+    animation: scrollBackgroundZigZag 20s linear infinite;
+}
+
+@keyframes scrollBackgroundZigZag {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 500px 0; /* Control scroll speed and direction */
+    }
+}

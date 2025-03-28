@@ -1,0 +1,36 @@
+<div class="text-center"> 
+<h2 class="text-5xl ml:text-6xl font-bold text-white" style="font-family: "Caveat Brush', cursive;"> Bomberflan </h2> 
+</div 
+<div class="flex flex-col md:flex-row items-center justify-between h-full pc-1 nd:px-12 ру-8 md:py-
+style="margin: 3res; padding: 3nen; border-top: 4px solid rgb(255, 255, 255); darkreader-inline-border-top: var(darkreader-border-ffffff #383436);" data-darikreader-
+inline-border-top() 
+1- Left or Right Content (Text) --> 
+<div class-w-full mw-1/2 flex Flex-col items-center justify-center mab-8 edimb- text-center"></div>im 
+<1 Left or Right Media (Image or Video) --> 
+<div class="w-full mtiw-1/2 flex items-center justify-center"></div> 
+</div> 
+<div class="fles flex-col ediflex-row items-center justify-between h-full pc-1 вбірк-12 ру-8 ndspy-
+nd:flex-row-reverse" style="margin: 3rem; padding: 3rem; border-top: 4px solid rgb(255, 255, 255); darkreader-inline-border-top: var(--darkreader-border-ffffff, #303436);" 
+data-darkreader-inline-border-top flas 
+<1-- Left or Right Content (Text)--> 
+cdiv class="w-full mdru-1/2 flex flex-col items-center justify-center nb-8 nóimb- text-center"></div> (FL 
+Left or Right Media (Image or Video) 
+<div class="w-full mdrw-1/2 flex items-center justify-center"></div> 
+</div> 
+<div class="flex flex-col md:flex-row items-center justify-between h-full ps-1 mdipx-12 py-8 mdipy-0 
+style="margin: 3rem; padding: 3ren; border-top: 4px solid rgb(255, 255, 255); --darkreader-inline-border-top: var(--darkreader-border-ffffff, #383436);" data-darkreader-
+inline-border-top 
+<1- Left or Right Content (Text) --> 
+<div class="w-full md:w-1/2 flex flex-col items-center justify-center nb-8 ndimb- text-center"> fie 
+<h2 class="text-5xl nditext-8x1 test-white font-bold leading snug" style="font-family: "Caveat Brush', cursive; width: 50%;"> Power-ups and Boosts </h2> 
+Sub-lines -> 
+<p class="st-4 md:mt-8 18:nt-10 text-ig ad:text-xl font-bold text-gray-100 leading-related" style="width: 6%; font-family: 'Fredoka', sans-serif;"> 
+*Collect various power-ups, such as shields, extra damage, and extra lives to enhance your gameplay. 
+</p> 
+</div> 
+<1-- Left or Right Media (Image or Video)--> 
+<div class="w-full nd:w-1/2 flex items-center justify-center> 
+<img src="/Assets/BomberGame/3.jpg" alt="Power-ups and Boosts" class="rounded-1g transform transition duration-300 hover:scale-185" style="width: 455; ses-width: lären; height: auto;"> 
+</div> 
+</div> 
+</div> 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Gallery</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap">
+</head>
+
+<body>
+
+    <div class="mx-auto w-full h-auto" style="background-color: rgb(11, 131, 201);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 w-full h-auto" style="padding-bottom: 5rem;">
+            <div id="game-grid"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-1 gap-y-8 p-4 sm:p-6 md:p-8">
+                <!-- Game cards inserted dynamically -->
+            </div>
+        </div>
+
+        <!-- Dynamic Game Section -->
+        <div id="game-section-container" class="w-full h-auto px-4 sm:px-6 lg:px-8">
+            <!-- Selected game section will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        const games = {
+            game1: {
+                title: "BomberMan",
+                sections: [
+                    {
+                        title: "Plant Bombs",
+                        description: "Strategically place bombs and destroy obstacles while defeating enemies.",
+                        media: { type: "image", src: "/Assets/HeadIcons/BomberGame.jpg" }
+                    },
+                    {
+                        title: "Defeat Bosses",
+                        description: "Take on powerful bosses across different levels to unlock new abilities.",
+                        media: { type: "video", src: "/Assets/AllRecording/BomberMan-1.mp4" }
+                    }
+                ]
+            },
+            game2: {
+                title: "Burger Shop",
+                sections: [
+                    {
+                        title: "Manage Orders",
+                        description: "Handle a busy kitchen and fulfill customer orders quickly.",
+                        media: { type: "image", src: "/Assets/HeadIcons/BurgerGame.jpg" }
+                    },
+                    {
+                        title: "Expand Menu",
+                        description: "Upgrade your shop and attract new customers with unique menu items.",
+                        media: { type: "video", src: "/Assets/AllRecording/BurgerShop-1.mp4" }
+                    }
+                ]
+            }
+        };
+
+        let selectedCard = null;
+
+        function loadGameCards() {
+            const gameGrid = document.getElementById("game-grid");
+            for (const key in games) {
+                const game = games[key];
+                const gameCard = document.createElement("div");
+                gameCard.className = `game-card bg-white p-2 rounded-lg shadow-lg text-center cursor-pointer transition-transform 
+                    duration-200 hover:-translate-y-1 hover:shadow-xl border-4 border-transparent flex flex-col justify-between 
+                    w-[180px] h-[240px] sm:w-[180px] sm:h-[240px] md:w-[240px] md:h-[300px] mx-auto`;
+
+                gameCard.innerHTML = `
+                    <a href="#game-section-container">
+                        <img src="${game.sections[0].media.src}" alt="${game.title}" 
+                            class="w-full h-[120px] sm:h-[140px] md:h-[160px] object-cover rounded-lg mb-2">
+                        <h3 class="mt-auto text-sm sm:text-base font-semibold text-gray-800">${game.title}</h3>
+                    </a>
+                `;
+                gameCard.onclick = () => loadGameSections(gameCard, key);
+                gameGrid.appendChild(gameCard);
+            }
+        }
+
+        function loadGameSections(gameCard, gameKey) {
+            const game = games[gameKey];
+            const sectionContainer = document.getElementById("game-section-container");
+
+            // Clear previous sections
+            sectionContainer.innerHTML = "";
+
+            // Add game title at the top
+            const gameTitle = document.createElement("div");
+            gameTitle.className = "text-center my-8";
+            gameTitle.innerHTML = `
+                <h2 class="text-5xl md:text-6xl font-bold text-white" style="font-family: 'Caveat Brush', cursive;">
+                    ${game.title}
+                </h2>
+            `;
+            sectionContainer.appendChild(gameTitle);
+
+            // Add all sections dynamically with alternate layout
+            game.sections.forEach((section, index) => {
+                const isOdd = index % 2 !== 0;
+                const sectionDiv = document.createElement("div");
+
+                sectionDiv.className = `flex flex-col md:flex-row border-2 items-center justify-between h-full px-1 md:px-12 py-8 md:py-0
+                    ${isOdd ? "md:flex-row-reverse" : ""}`; // Reverse content on odd sections
+
+                sectionDiv.style.margin = "3rem"; 
+                sectionDiv.style.padding = "3rem"; 
+
+                sectionDiv.innerHTML = `
+                    <!-- Left or Right Content (Text) -->
+                    <div class="w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0 text-center" >
+                        <h2 class="text-5xl md:text-8xl text-white font-bold leading-snug"
+                            style="font-family: 'Caveat Brush', cursive; width: 50%;">
+                            ${section.title}
+                        </h2>
+                        <!-- Sub-lines -->
+                        <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl font-bold text-gray-100 leading-relaxed"
+                            style="width: 60%; font-family: 'Fredoka', sans-serif;">
+                            ${section.description}
+                        </p>
+                    </div>
+
+                    <!-- Left or Right Media (Image or Video) -->
+                    <div class="w-full md:w-1/2 flex items-center justify-center">
+                        ${section.media.type === "image" ?
+                            `<img src="${section.media.src}" alt="${section.title}" 
+                                class="rounded-lg transform transition duration-300 hover:scale-105"
+                                style="width: 45%; max-width: 18rem; height: auto;">`
+                            :
+                            `<video src="${section.media.src}" controls
+                                class="rounded-lg transform transition duration-300 hover:scale-105"
+                                style="width: 45%; max-width: 18rem; height: auto;"></video>`
+                        }
+                    </div>
+                `;
+                sectionContainer.appendChild(sectionDiv);
+            });
+
+            // Highlight the selected card
+            if (selectedCard) {
+                selectedCard.classList.remove("border-red-500");
+            }
+            gameCard.classList.add("border-red-500");
+            selectedCard = gameCard;
+        }
+
+        document.addEventListener("DOMContentLoaded", loadGameCards);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap">
+</head>
+
+<body class="bg-gray-100">
+    <!-- ================================
+    🌟 NAVBAR SECTION START
+    ==================================== -->
+    <nav class="text-center text-xl py-2 sticky top-0 z-50 shadow-lg"
+        style="background-image: repeating-linear-gradient(-45deg, #242728, #242728 6px, #1f2223 0px, #1f2223 12px);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
+                <!-- Logo or Title -->
+                <div class="text-white text-2xl font-bold">PortFolio</div>
+
+                <!-- Nav Links (Desktop) -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">Home</span>
+                    </a>
+                    <a href="about.html" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">About</span>
+                    </a>
+                    <a href="projects.html" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">Projects</span>
+                    </a>
+                    <a href="#mainfooter" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by Default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-white">
+                <a href="index.html" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">Home</span>
+                </a>
+                <a href="about.html" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">About</span>
+                </a>
+                <a href="projects.html" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">Projects</span>
+                </a>
+                <a href="#mainfooter" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================================
+    🌟 NAVBAR SECTION END
+    ==================================== -->
+
+    <!-- ================================
+    🎨 HERO SECTION START
+    ==================================== -->
+
+    <div class="w-full h-auto md:h-[calc(75vh*1.01)] bg-tile-animation-LeftDown"
+        style="background-image: url('/Assets/download.png');">
+
+        <div class="flex flex-col md:flex-row items-center justify-between h-full px-1 md:px-12 py-8 md:py-0"
+            id="section1">
+
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0 text-center">
+                <h1 class="text-5xl md:text-8xl text-white font-bold leading-snug transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; width: 50%;">
+                    Hello Everyone !
+                </h1>
+                <!-- Sub-lines -->
+                <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl font-bold text-gray-100 leading-relaxed font-family: 'Fredoka', sans-serif; transition-all duration-300 hover:scale-105"
+                    style="width: 60%;">
+                    Welcome to my game development portfolio! I’m super excited to share my journey of creating
+                    immersive and fun gaming experiences. Dive in and explore my projects, ideas, and everything I’m
+                    passionate about in the world of game development. Let’s explore together!
+                </p>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <img src="/Assets/Avatar_2.png" alt="Big Image"
+                    class="rounded-lg transform transition duration-300 hover:scale-105"
+                    style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="w-full h-auto md:h-[calc(75vh*1.01)] bg-tile-animation-RightDown" id="section2" ;
+        style="background-image: url('/Assets/download-blue.png');">
+        <div class="flex flex-col md:flex-row items-center justify-between h-full px-1 md:px-12 py-8 md:py-0">
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <img src="/Assets/Avatar_3.png" alt="Big Image"
+                    class="rounded-lg transform transition duration-300 hover:scale-105"
+                    style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
+            </div>
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0 text-center">
+                <!-- Heading with hover effect -->
+                <h1 class="text-5xl md:text-8xl text-white font-bold leading-snug transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; width: 50%;">
+                    About Me
+                </h1>
+
+                <!-- Sub-lines with hover effect to black -->
+                <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="font-family: 'Fredoka', sans-serif; width: 60%;">
+                    Hi, I’m Krishna, a game developer who loves turning ideas into interactive experiences. I enjoy
+                    experimenting
+                    with game mechanics, designing levels, and making sure every project feels fun and engaging.
+                </p>
+
+                <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="font-family: 'Fredoka', sans-serif; width: 60%;">
+                    When I’m not coding or designing, you’ll probably find me playing games, learning new tech, or
+                    brainstorming the
+                    next cool idea. I’m all about creativity, challenges, and bringing ideas to life!
+                </p>
+                <a href="about.html">
+                    <button class="relative overflow-hidden px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition-all duration-300 group hover:bg-transparent mt-10" style="background-color: rgb(0, 102, 165)" >
+                        <span class="relative z-10">Explore More</span>
+                        <div class="absolute inset-0 bg-black transition-all duration-300 scale-0 group-hover:scale-100 rounded-lg"></div>
+                    </button> 
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="w-full py-10" id="section3" ; style="background: #00a6ff">
+        <!-- Section Title -->
+        <div class="flex items-center justify-center"
+            style="padding: 3rem 0 3rem 0; margin-top: -5rem; background-color: #1f2223;">
+            <h1 class="text-4xl text-white font-bold text-center">Projects</h1>
+        </div>
+
+        <!-- Project Grid Section -->
+        <div class="container mx-auto" style="margin-top: 100px;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 justify-center">
+                <!-- Game 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game1')">
+                    <a href="projects.html#game-description">
+                        <img src="/Assets/HeadIcons/BomberGame.jpg" alt="BomberMan" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">BomberMan</h2>
+                            <p class="text-gray-600 mt-2">Plant bombs strategically and blow up obstacles while trying
+                                to defeat your enemies. Can you survive the blast?</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Game 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game2')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/BurgerGame.jpg" alt="Burger Shop" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Burger Shop</h2>
+                            <p class="text-gray-600 mt-2">Manage a busy burger joint and fulfill orders quickly to
+                                satisfy your hungry customers!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Game 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game3')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/HideGame.jpg" alt="Hide N Seek" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Hide N Seek</h2>
+                            <p class="text-gray-600 mt-2">Blend into your surroundings and avoid being found, or seek
+                                out your friends in this fun classic game.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Game 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game4')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/HitmanGame.jpg" alt="Hitman Go" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Hitman Go</h2>
+                            <p class="text-gray-600 mt-2">Plan your moves carefully and eliminate your targets with
+                                stealth and precision.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Game 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game5')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/HotelGame.jpg" alt="Perfect Hotel" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Perfect Hotel</h2>
+                            <p class="text-gray-600 mt-2">Build and manage a luxurious hotel, keeping guests happy and
+                                improving your services to create the perfect stay.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Game 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game6')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/HunterGame.jpg" alt="Hunter Assassin"
+                            class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Hunter Assassin</h2>
+                            <p class="text-gray-600 mt-2">Use stealth and strategy to eliminate enemies and complete
+                                deadly missions in this thrilling action game.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Game 7 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game7')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/KartGame.jpg" alt="Kart Mayhem" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Kart Mayhem</h2>
+                            <p class="text-gray-600 mt-2">Race your way to victory in a fast-paced kart battle where
+                                strategy and speed are the keys to winning.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Game 8 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game8')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/MallGame.jpg" alt="Shopping Mall" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Shopping Mall</h2>
+                            <p class="text-gray-600 mt-2">Grow your mall by adding trendy stores and attracting shoppers
+                                to become the ultimate retail tycoon.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Game 9 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game9')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/SkiGame.jpg" alt="Ski Resort" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Ski Resort</h2>
+                            <p class="text-gray-600 mt-2">Design and manage a thriving ski resort while ensuring your
+                                guests have a thrilling winter experience.</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Game 10 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 mx-auto"
+                    style="height: 28rem; width: 20rem;" onclick="loadGame('game10')">
+                    <a href="#">
+                        <img src="/Assets/HeadIcons/TrackGame.jpg" alt="Track&Field" class="w-full h-60 object-cover">
+                        <div class="p-4" style="height: 10rem; width: 20rem;">
+                            <h2 class="text-2xl font-semibold text-gray-800">Track&Field</h2>
+                            <p class="text-gray-600 mt-2">Compete in thrilling track and field events, testing your
+                                speed, agility, and endurance to win gold.</p>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================================
+    🌟 FOOTER SECTION START
+    ==================================== -->
+    <footer class="bg-gray-900 text-white py-8" id="mainfooter">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+
+                <!-- Column 1: Portfolio Info -->
+                <div>
+                    <h3 class="text-2xl font-bold">PortFolio</h3>
+                    <p class="text-sm mt-1 text-gray-400">© 2025 All Rights Reserved.</p>
+                </div>
+
+                <!-- Column 2: Contact Me -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Me</h3>
+                    <div class="flex flex-col space-y-2 text-sm">
+                        <!-- Phone -->
+                        <a href="tel:+91-8446998543"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="/Assets/whatsapp.png" alt="Phone Icon" class="w-5 h-5 mr-2" />
+                            +91-8668687472
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:krishna34rede@gmail.com"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="/Assets/gmail.png" alt="Email Icon" class="w-5 h-5 mr-2" />
+                            krishna23rede@gmail.com
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Column 3: Social Media Icons -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Me</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/krishna-rede-a4ab81242/" target="_blank"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="/Assets/linkedin.png" alt="LinkedIn Icon" class="w-5 h-5 mr-2" />
+                            Krishna Rede
+                        </a>
+                        <!-- Add more social icons here if needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================================
+    🌟 FOOTER SECTION END
+    ==================================== -->
+
+    <!-- ================================
+    🚀 JAVASCRIPT FOR MOBILE MENU
+    ==================================== -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function loadGame(gameKey) {
+            // Redirect to projects.html with the selected game's key
+            window.location.href = `projects.html?game=${gameKey}`;
+        }
+    </script>
+</body>
+
+</html>

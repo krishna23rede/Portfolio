@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap">
+</head>
+
+<body class="bg-gray-100">
+    <!-- ================================
+    🌟 NAVBAR SECTION START
+    ==================================== -->
+    <nav class="text-center text-xl py-2 sticky top-0 z-50 shadow-lg"
+        style="background-image: repeating-linear-gradient(-45deg, #242728, #242728 6px, #1f2223 0px, #1f2223 12px);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
+                <!-- Logo or Title -->
+                <div class="text-white text-2xl font-bold">PortFolio</div>
+
+                <!-- Nav Links (Desktop) -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">Home</span>
+                    </a>
+                    <a href="about.html" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">About</span>
+                    </a>
+                    <a href="projects.html" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">Projects</span>
+                    </a>
+                    <a href="#mainfooter" class="relative text-gray-700 px-3 py-2 rounded-lg overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-red-500 w-0 transition-all duration-300 ease-out group-hover:w-full group-hover:right-0 left-auto"></span>
+                        <span class="relative z-10 group-hover:text-white">Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by Default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-white">
+                <a href="index.html" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">Home</span>
+                </a>
+                <a href="about.html" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">About</span>
+                </a>
+                <a href="projects.html" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">Projects</span>
+                </a>
+                <a href="#mainfooter" class="relative block px-4 py-2 border-b-4 overflow-hidden group">
+                    <span
+                        class="absolute inset-0 bg-red-500 w-0 transition-all duration-800 group-hover:w-full group-hover:right-0 left-auto"></span>
+                    <span class="relative z-10">Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================================
+    🌟 NAVBAR SECTION END
+    ==================================== -->
+
+    <!-- ================================
+    🎨 HERO SECTION START
+    ==================================== -->
+
+    <div class="w-full h-auto md:h-[calc(75vh*1.01)] bg-tile-animation-LeftDown"
+        style="background-image: url('/Assets/download-blue.png');">
+
+        <div class="flex flex-col md:flex-row items-center justify-between h-full px-1 md:px-12 py-8 md:py-0"
+            id="section1">
+
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0 text-center">
+                <h1 class="text-5xl md:text-8xl text-white font-bold leading-snug transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; width: 50%;">
+                    Introduction
+                </h1>
+                <!-- Sub-lines -->
+                <p class="mt-2 md:mt-4 lg:mt-10 text-lg md:text-xl font-bold text-gray-100 leading-relaxed font-family: 'Fredoka', sans-serif; transition-all duration-300 hover:scale-105"
+                    style="width: 80%;">
+                    My name is Krishna, and I am a Unity developer with a Bachelor's degree in Computer Science. I live
+                    in Pune, Maharashtra, and have a deep passion for both playing and developing games.
+                </p>
+                <p class="mt-2 md:mt-4 lg:mt-10 text-lg md:text-xl font-bold text-gray-100 leading-relaxed font-family: 'Fredoka', sans-serif; transition-all duration-300 hover:scale-105"
+                    style="width: 80%;">
+                    I am particularly interested in game mechanics, operating systems, game engines, and everything that
+                    drives interactive experiences. My work involves not just building games but also exploring the
+                    underlying technologies that make them possible.
+                </p>
+                <p class="mt-2 md:mt-4 lg:mt-10 text-lg md:text-xl font-bold text-gray-100 leading-relaxed font-family: 'Fredoka', sans-serif; transition-all duration-300 hover:scale-105"
+                    style="width: 80%;">
+                    I enjoy experimenting with different frameworks, optimizing performance, and constantly learning to
+                    refine my craft. Whether it's designing immersive gameplay or understanding the intricacies of game
+                    architecture, I’m always eager to dive deeper and push boundaries.
+                </p>
+
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <img src="/Assets/Avatar_4.png" alt="Big Image"
+                    class="rounded-lg transform transition duration-300 hover:scale-105"
+                    style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="w-full h-auto md:h-[calc(75vh*1.01)] bg-tile-animation-RightDown" id="section2" ;
+        style="background-image: url('/Assets/download.png');">
+        <div class="flex flex-col md:flex-row items-center justify-between h-full px-1 md:px-12 py-8 md:py-0">
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <img src="/Assets/Avatar_7.png" alt="Big Image"
+                    class="rounded-lg transform transition duration-300 hover:scale-105"
+                    style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
+            </div>
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0 text-center">
+                <!-- Heading with hover effect -->
+                <h1 class="text-5xl md:text-8xl text-white font-bold leading-snug transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300 "
+                    style="font-family: 'Caveat Brush', cursive; width: 50%;">
+                    Projects
+                </h1>
+
+                <!-- Sub-lines with hover effect to black -->
+
+                <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105 "
+                    style="font-family: 'Fredoka', sans-serif; width: 80%;">
+                    I have developed 8-10 games ranging across different genres, including shop management simulators,
+                    hyper-casual games, and puzzle-based experiences. Each project has been a learning journey, allowing
+                    me to explore different aspects of game design and development.
+                </p>
+                <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105 "
+                    style="font-family: 'Fredoka', sans-serif; width: 80%;">
+                    I’ve enjoyed working on these projects, especially experimenting with game mechanics and optimizing
+                    user engagement. Shop management games challenged me to build complex systems with dynamic user
+                    interactions, while hyper-casual games pushed me to focus on simplicity and polish.
+                </p>
+                <p class="mt-4 md:mt-8 lg:mt-10 text-lg md:text-xl text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105 "
+                    style="font-family: 'Fredoka', sans-serif; width: 80%;">
+                    Puzzle games required careful balancing of difficulty and fun, which was both rewarding and
+                    insightful. I’m constantly looking forward to creating more immersive and technically challenging
+                    projects that push my skills further.
+                </p>
+                <a href="projects.html">
+                    <button
+                        class="relative overflow-hidden px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition-all duration-300 group hover:bg-transparent mt-10"
+                        style="background-color: rgb(165 0 0)">
+                        <span class="relative z-10">Explore More</span>
+                        <div
+                            class="absolute inset-0 bg-black transition-all duration-300 scale-0 group-hover:scale-100 rounded-lg">
+                        </div>
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="w-full h-auto md:h-full py-12 bg-tile-animation-LeftDown"
+        style="background-image: url('/Assets/download-blue.png');">
+
+        <div class="flex flex-col md:flex-row justify-between h-full px-4 md:px-12 py-8 md:py-0" id="section1">
+
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-3/5 flex flex-col items-center justify-center text-left mb-8 md:mb-0">
+                <h1 class="text-5xl md:text-8xl text-white font-bold leading-snug mb-4 text-center transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; width: 100%;">
+                    Skills
+                </h1>
+
+                <!-- Sub-lines -->
+                <p class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif; color: black;">
+                    I have a solid foundation in <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">game
+                        development</span>, with expertise in
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Unity</span>
+                    and <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">C#
+                        scripting</span>. I’m well-versed
+                    in designing and implementing <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">game
+                        mechanics</span>, ensuring smooth
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">UI/UX
+                        logic</span>, and handling <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">level
+                        design</span>
+                    that balances challenge and engagement.
+                </p>
+
+                <p class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif;">
+                    On the technical side, I’m proficient with version control using <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Git</span>
+                    and
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">GitHub</span>
+                    and have experience integrating services like
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Firebase</span>.
+                    I’ve also worked with <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Mirror
+                        for Unity</span> to handle multiplayer functionality and have a basic understanding of
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">HTML,
+                        CSS, and JavaScript</span> for web-based game components. Additionally, I am skilled in
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">level
+                        design</span>, ensuring that the environment complements the game’s narrative and maintains an
+                    engaging player experience.
+                </p>
+
+                <p class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif;">
+                    My skillset extends to <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">animation
+                        and sound integration</span>, enhancing the
+                    overall gameplay experience. I’m comfortable working with <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">3D
+                        physics</span> and
+                    enjoy exploring new technologies through <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">spontaneous
+                        learning</span>,
+                    which has helped me build a diverse set of capabilities.
+                </p>
+
+                <!-- Game Genre Expertise Section -->
+                <h3 class="mt-8 md:mt-12 text-2xl md:text-3xl font-bold text-white transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; background-color: rgb(0, 82, 165); padding: 20px; border-radius: 20px;">
+                    Game Genre Expertise
+                </h3>
+
+                <ul class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif; list-style-type: disc; padding-left: 20px;">
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Hyper-Casual
+                            Games</span> – Fast-paced, engaging, and intuitive designs.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Hotel/Shop
+                            Management Simulations</span> – Complex systems involving customer
+                        interactions and resource management.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Kart
+                            Racing and Track Running</span> – Dynamic and responsive gameplay
+                        mechanics.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Puzzle
+                            Games</span> – Balancing difficulty, logic, and engagement.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Farming
+                            Games</span> – Creating interactive environments with
+                        resource management elements.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">2D
+                            Platformers</span> – Developing responsive controls and intricate
+                        <span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">level
+                            designs</span> that challenge players.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Image -->
+            <div class="w-full md:w-2/5 flex items-center justify-center">
+                <img src="/Assets/Avatar_5.png" alt="Avatar Image"
+                    class="rounded-lg transform transition duration-300 hover:scale-105 shadow-lg"
+                    style="width: 70%; max-width: 24rem; height: auto;">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="w-full h-auto md:h-full bg-tile-animation-RightDown" id="section2" ;
+        style="background-image: url('/Assets/download.png'); padding: 20px 0 20px 0;">
+        <div class="flex flex-col md:flex-row items-center justify-between h-full px-1 md:px-12 py-8 md:py-0">
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <img src="/Assets/Avatar_6.png" alt="Big Image"
+                    class="rounded-lg transform transition duration-300 hover:scale-105"
+                    style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
+            </div>
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-3/5 flex flex-col items-center justify-center text-left mb-8 md:mb-0">
+                <h1 class="text-5xl md:text-8xl text-white font-bold leading-snug mb-4 text-center transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; width: 100%;">
+                    Work Experience
+                </h1>
+            
+                <!-- Sub-lines -->
+                <p class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif; color: black;">
+                    I have a solid foundation in <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">game
+                        development</span>, with expertise in
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Unity</span>
+                    and <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">C#
+                        scripting</span>. I’m well-versed
+                    in designing and implementing <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">game
+                        mechanics</span>, ensuring smooth
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">UI/UX
+                        logic</span>, and handling <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">level
+                        design</span>
+                    that balances challenge and engagement.
+                </p>
+            
+                <p class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif;">
+                    On the technical side, I’m proficient with version control using <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Git</span>
+                    and
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">GitHub</span>
+                    and have experience integrating services like
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Firebase</span>.
+                    I’ve also worked with <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Mirror
+                        for Unity</span> to handle multiplayer functionality and have a basic understanding of
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">HTML,
+                        CSS, and JavaScript</span> for web-based game components. Additionally, I am skilled in
+                    <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">level
+                        design</span>, ensuring that the environment complements the game’s narrative and maintains an
+                    engaging player experience.
+                </p>
+            
+                <p class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif;">
+                    My skillset extends to <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">animation
+                        and sound integration</span>, enhancing the
+                    overall gameplay experience. I’m comfortable working with <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">3D
+                        physics</span> and
+                    enjoy exploring new technologies through <span
+                        style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">spontaneous
+                        learning</span>,
+                    which has helped me build a diverse set of capabilities.
+                </p>
+            
+                <!-- Additional Skills -->
+                <h3 class="mt-8 md:mt-12 text-2xl md:text-3xl font-bold text-white transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; background-color: rgb(165, 0, 0); padding: 20px; border-radius: 20px;">
+                    Additional Skills
+                </h3>
+                <ul class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif; list-style-type: disc; padding-left: 20px;">
+                    <li class="transition-all duration-300 hover:scale-105">Game Loop Design and Optimization</li>
+                    <li class="transition-all duration-300 hover:scale-105">Testing and Debugging for Performance</li>
+                    <li class="transition-all duration-300 hover:scale-105">Problem Solving and Analytical Thinking</li>
+                </ul>
+            
+                <!-- Game Genre Expertise Section -->
+                <h3 class="mt-8 md:mt-12 text-2xl md:text-3xl font-bold text-white transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300"
+                    style="font-family: 'Caveat Brush', cursive; background-color: rgb(165, 0, 0); padding: 20px; border-radius: 20px;">
+                    Game Genre Expertise
+                </h3>
+            
+                <ul class="mt-4 md:mt-6 text-lg md:text-xl font-bold text-gray-100 leading-relaxed"
+                    style="width: 95%; font-family: 'Fredoka', sans-serif; list-style-type: disc; padding-left: 20px;">
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Hyper-Casual
+                            Games</span> – Fast-paced, engaging, and intuitive designs.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Hotel/Shop
+                            Management Simulations</span> – Complex systems involving customer
+                        interactions and resource management.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Kart
+                            Racing and Track Running</span> – Dynamic and responsive gameplay
+                        mechanics.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Puzzle
+                            Games</span> – Balancing difficulty, logic, and engagement.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">Farming
+                            Games</span> – Creating interactive environments with
+                        resource management elements.</li>
+                    <li class="transition-all duration-300 hover:scale-105"><span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">2D
+                            Platformers</span> – Developing responsive controls and intricate
+                        <span
+                            style="text-shadow: 1px 1px 0 #1f2223, -1px 1px 0 #1f2223, 1px -1px 0 #1f2223, -1px -1px 0 #1f2223;">level
+                            designs</span> that challenge players.
+                    </li>
+                </ul>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- ================================
+    🌟 FOOTER SECTION START
+    ==================================== -->
+    <footer class="bg-gray-900 text-white py-8" id="mainfooter">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+
+                <!-- Column 1: Portfolio Info -->
+                <div>
+                    <h3 class="text-2xl font-bold">PortFolio</h3>
+                    <p class="text-sm mt-1 text-gray-400">© 2025 All Rights Reserved.</p>
+                </div>
+
+                <!-- Column 2: Contact Me -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Me</h3>
+                    <div class="flex flex-col space-y-2 text-sm">
+                        <!-- Phone -->
+                        <a href="tel:+91-8446998543"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="/Assets/whatsapp.png" alt="Phone Icon" class="w-5 h-5 mr-2" />
+                            +91-8668687472
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:krishna34rede@gmail.com"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="/Assets/gmail.png" alt="Email Icon" class="w-5 h-5 mr-2" />
+                            krishna23rede@gmail.com
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Column 3: Social Media Icons -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Me</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/krishna-rede-a4ab81242/" target="_blank"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="/Assets/linkedin.png" alt="LinkedIn Icon" class="w-5 h-5 mr-2" />
+                            Krishna Rede
+                        </a>
+                        <!-- Add more social icons here if needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================================
+    🌟 FOOTER SECTION END
+    ==================================== -->
+
+
+
+
+    <!-- ================================
+    🚀 JAVASCRIPT FOR MOBILE MENU
+    ==================================== -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function loadGame(gameKey) {
+            // Redirect to projects.html with the selected game's key
+            window.location.href = `projects.html?game=${gameKey}`;
+        }
+    </script>
+</body>
+
+</html>
