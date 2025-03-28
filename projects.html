@@ -94,7 +94,7 @@
     ==================================== -->
     <div class="mx-auto w-full h-auto" style="background-color: rgb(0, 128, 255);">
 
-        <div class="mx-auto w-full h-auto bg-tile-animation-LeftDown" style="background-image: url('/Assets/download-blue.png');">
+        <div class="mx-auto w-full h-auto bg-tile-animation-LeftDown" style="background-image: url('Assets/download-blue.png');">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 w-full h-auto">
                 <div id="game-grid"
                     class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-1 gap-y-8 p-4 sm:p-6 md:p-8">
@@ -131,13 +131,13 @@
                         <!-- Phone -->
                         <a href="tel:+91-8446998543"
                             class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
-                            <img src="/Assets/whatsapp.png" alt="Phone Icon" class="w-5 h-5 mr-2" />
+                            <img src="Assets/whatsapp.png" alt="Phone Icon" class="w-5 h-5 mr-2" />
                             +91-8668687472
                         </a>
                         <!-- Email -->
                         <a href="mailto:krishna34rede@gmail.com"
                             class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
-                            <img src="/Assets/gmail.png" alt="Email Icon" class="w-5 h-5 mr-2" />
+                            <img src="Assets/gmail.png" alt="Email Icon" class="w-5 h-5 mr-2" />
                             krishna23rede@gmail.com
                         </a>
 
@@ -147,16 +147,23 @@
                 <!-- Column 3: Social Media Icons -->
                 <div>
                     <h3 class="text-lg font-bold mb-4">Follow Me</h3>
-                    <div class="flex justify-center md:justify-start space-x-4">
+                    <div class="flex flex-col space-y-2 text-sm ">
                         <!-- LinkedIn -->
                         <a href="https://www.linkedin.com/in/krishna-rede-a4ab81242/" target="_blank"
                             class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
-                            <img src="/Assets/linkedin.png" alt="LinkedIn Icon" class="w-5 h-5 mr-2" />
-                            Krishna Rede
+                            <img src="Assets/linkedin.png" alt="LinkedIn Icon" class="w-5 h-5 mr-2" />
+                            LinkedIn
+                        </a>
+                        <!-- Github -->
+                        <a href="https://github.com/krishna23rede" target="_blank"
+                            class="flex items-center justify-center md:justify-start text-gray-400 hover:text-white transition duration-300">
+                            <img src="Assets/github.png" alt="LinkedIn Icon" class="w-5 h-5 mr-2" />
+                            GitHub
                         </a>
                         <!-- Add more social icons here if needed -->
                     </div>
                 </div>
+                
             </div>
         </div>
     </footer>
@@ -168,446 +175,446 @@
         const games = {
             game1: {
                 title: "BomberMan",
-                image: { type: "image", src: "/Assets/HeadIcons/BomberGame.jpg" },
+                image: { type: "image", src: "Assets/HeadIcons/BomberGame.jpg" },
                 downloadLink: "#",
                 sections: [
                     {
                         title: "Procedurally Generated Maps",
                         description: "Experience unique gameplay each time with dynamically generated levels that challenge your strategy.",
-                        media: { type: "image", src: "/Assets/BomberGame/1.jpg" }
+                        media: { type: "image", src: "Assets/BomberGame/1.jpg" }
                     },
                     {
                         title: "Joystick and Bomb Button Controls",
                         description: "Use the joystick to navigate through the maze and plant bombs strategically near wooden boxes.",
-                        media: { type: "video", src: "/Assets/AllRecording/BomberMan-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/BomberMan-1.mp4" }
                     },
                     {
                         title: "Bomb Explosion VFX",
                         description: "Enjoy stunning visual effects with each explosion, adding dynamic random colors with excitement to your bombing spree.",
-                        media: { type: "image", src: "/Assets/BomberGame/2.jpg" }
+                        media: { type: "image", src: "Assets/BomberGame/2.jpg" }
                     },
                     {
                         title: "Mystery Box Rewards",
                         description: "Destroy mystery boxes to unlock and collect random special power-ups that boost your abilities.",
-                        media: { type: "video", src: "/Assets/AllRecording/BomberMan-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/BomberMan-2.mp4" }
                     },
                     {
                         title: "Power-ups and Boosts",
                         description: "Collect various power-ups, such as shields, extra damage, and extra lives to enhance your gameplay.",
-                        media: { type: "image", src: "/Assets/BomberGame/3.jpg" }
+                        media: { type: "image", src: "Assets/BomberGame/3.jpg" }
                     }
                 ]
             },
             game2: {
                 title: "Burger Shop",
-                image: { type: "image", src: "/Assets/HeadIcons/BurgerGame.jpg" },
-                downloadLink: "/Assets/burgerGame/Build/BurgerManager.apk",
+                image: { type: "image", src: "Assets/HeadIcons/BurgerGame.jpg" },
+                downloadLink: "Assets/burgerGame/Build/BurgerManager.apk",
                 sections: [
                     {
                         title: "Serve Burgers to Customers",
                         description: "Prepare and serve delicious burgers to customers while keeping up with demand.",
-                        media: { type: "image", src: "/Assets/BurgerGame/1.jpg" }
+                        media: { type: "image", src: "Assets/BurgerGame/1.jpg" }
                     },
                     {
                         title: "Faster Service, Happier Customers",
                         description: "Speed up service to keep your customers satisfied and coming back for more.",
-                        media: { type: "video", src: "/Assets/AllRecording/BurgerGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-1.mp4" }
                     },
                     {
                         title: "Dine-in with Customizable Chairs",
                         description: "Allow customers to enjoy their meals with cozy, customizable seating arrangements.",
-                        media: { type: "image", src: "/Assets/BurgerGame/2.jpg" }
+                        media: { type: "image", src: "Assets/BurgerGame/2.jpg" }
                     },
                     {
                         title: "Drive-Thru and Reception Service",
                         description: "Juggle between serving walk-in customers and fulfilling drive-thru orders efficiently.",
-                        media: { type: "video", src: "/Assets/AllRecording/BurgerGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-2.mp4" }
                     },
                     {
                         title: "Provide Drive-Thru Service",
                         description: "Serve burgers quickly through the drive-thru window to keep the line moving.",
-                        media: { type: "image", src: "/Assets/BurgerGame/3.jpg" }
+                        media: { type: "image", src: "Assets/BurgerGame/3.jpg" }
                     },
                     {
                         title: "Parcel and Serve at Drive-Thru Counter",
                         description: "Prepare and pack orders for drive-thru customers, ensuring timely delivery.",
-                        media: { type: "image", src: "/Assets/BurgerGame/4.jpg" }
+                        media: { type: "image", src: "Assets/BurgerGame/4.jpg" }
                     },
                     {
                         title: "Clear Trash After Customer Leaves",
                         description: "Maintain cleanliness by disposing of trash once customers are done dining.",
-                        media: { type: "video", src: "/Assets/AllRecording/BurgerGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-3.mp4" }
                     },
                     {
                         title: "Fast Service Leads to Happy Customers",
                         description: "Efficient service ensures customers leave with a smile and positive experience.",
-                        media: { type: "image", src: "/Assets/BurgerGame/5.jpg" }
+                        media: { type: "image", src: "Assets/BurgerGame/5.jpg" }
                     }
                 ]
             },
             game3: {
                 title: "Hide N Seek",
-                image: { type: "image", src: "/Assets/HeadIcons/HideGame.jpg" },
-                downloadLink: "/Assets/hideGame/Build/HideFindSeek-4.apk",
+                image: { type: "image", src: "Assets/HeadIcons/HideGame.jpg" },
+                downloadLink: "Assets/hideGame/Build/HideFindSeek-4.apk",
                 sections: [
                     {
                         title: "Seeker Catches and Hider Hides",
                         description: "The seeker tries to catch the hiders while the hiders find the best spots to avoid detection.",
-                        media: { type: "image", src: "/Assets/hideGame/1.jpg" }
+                        media: { type: "image", src: "Assets/hideGame/1.jpg" }
                     },
                     {
                         title: "Collect and Drop Gems",
                         description: "Hiders can collect gems scattered across the map and drop them into designated boxes to gain points.",
-                        media: { type: "image", src: "/Assets/hideGame/2.jpg" }
+                        media: { type: "image", src: "Assets/hideGame/2.jpg" }
                     },
                     {
                         title: "Gameplay Overview and Game Loop",
                         description: "Watch an overview showcasing the game's mechanics, seeker and hider interactions, and strategy.",
-                        media: { type: "video", src: "/Assets/AllRecording/HideGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HideGame-1.mp4" }
                     },
                     {
                         title: "Rescue Caged Hiders",
                         description: "When caught, hiders are placed in cages. Fellow hiders can attempt to free them before the game ends.",
-                        media: { type: "image", src: "/Assets/hideGame/4.jpg" }
+                        media: { type: "image", src: "Assets/hideGame/4.jpg" }
                     },
                     {
                         title: "Interactive Environment",
                         description: "Explore interactive surroundings, including swimming pools, hidden tunnels, and obstacles to aid hiders.",
-                        media: { type: "image", src: "/Assets/hideGame/5.jpg" }
+                        media: { type: "image", src: "Assets/hideGame/5.jpg" }
                     },
                     {
                         title: "Speed Boost Power-up",
                         description: "Grab the speed boost to increase movement, helping seekers catch hiders or hiders rescue teammates quickly.",
-                        media: { type: "video", src: "/Assets/AllRecording/HideGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HideGame-2.mp4" }
                     },
                     {
                         title: "Camouflage Power-up",
                         description: "Use the camouflage ability to move stealthily and avoid being spotted by the seeker.",
-                        media: { type: "image", src: "/Assets/hideGame/6.jpg" }
+                        media: { type: "image", src: "Assets/hideGame/6.jpg" }
                     },
                     {
                         title: "Mutant Ability Power-up",
                         description: "Activate the mutant ability to phase through walls, enabling quick escapes and creative hiding tactics.",
-                        media: { type: "image", src: "/Assets/hideGame/7.jpg" }
+                        media: { type: "image", src: "Assets/hideGame/7.jpg" }
                     },
                     {
                         title: "Interesting Level Designs",
                         description: "Explore engaging and creatively designed 10 levels that offer diverse hiding spots and dynamic environments.",
-                        media: { type: "video", src: "/Assets/AllRecording/HideGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HideGame-3.mp4" }
                     }
                 ]
             },
             game4: {
                 title: "Hitman Go",
-                image: { type: "image", src: "/Assets/HeadIcons/HitmanGame.jpg" },
-                downloadLink: "/Assets/hitmanGame/Build/HitmanGame.apk" ,
+                image: { type: "image", src: "Assets/HeadIcons/HitmanGame.jpg" },
+                downloadLink: "Assets/hitmanGame/Build/HitmanGame.apk" ,
                 sections: [
                     {
                         title: "Move Strategically",
                         description: "Plan your moves carefully to avoid detection and complete your objective efficiently.",
-                        media: { type: "image", src: "/Assets/hitmanGame/1.jpg" }
+                        media: { type: "image", src: "Assets/hitmanGame/1.jpg" }
                     },
                     {
                         title: "Assassinate Guards",
                         description: "Take out guards silently and eliminate threats to clear your path.",
-                        media: { type: "image", src: "/Assets/hitmanGame/2.jpg" }
+                        media: { type: "image", src: "Assets/hitmanGame/2.jpg" }
                     },
                     {
                         title: "Reach the Destination in Time",
                         description: "Time is of the essence—navigate through obstacles and reach your target before the clock runs out.",
-                        media: { type: "image", src: "/Assets/hitmanGame/3.jpg" }
+                        media: { type: "image", src: "Assets/hitmanGame/3.jpg" }
                     },
                     {
                         title: "Unique Level Designs",
                         description: "Explore 10 meticulously crafted levels, each offering new challenges and opportunities.",
-                        media: { type: "video", src: "/Assets/AllRecording/HitmanGame.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HitmanGame.mp4" }
                     }
                 ]
             },
             game5: {
                 title: "Perfect Hotel",
-                image: { type: "image", src: "/Assets/HeadIcons/HotelGame.jpg" },
-                downloadLink: "/Assets/hotelGame/Build/HotelGame.apk",
+                image: { type: "image", src: "Assets/HeadIcons/HotelGame.jpg" },
+                downloadLink: "Assets/hotelGame/Build/HotelGame.apk",
                 sections: [
                     {
                         title: "Welcome and Check-in Customers",
                         description: "Greet customers and manage their check-ins to ensure a smooth and pleasant start to their stay.",
-                        media: { type: "image", src: "/Assets/hotelGame/1.jpg" }
+                        media: { type: "image", src: "Assets/hotelGame/1.jpg" }
                     },
                     {
                         title: "Check-in and Customer Arrival",
                         description: "Watch how customers check in and start their stay at the hotel.",
-                        media: { type: "video", src: "/Assets/AllRecording/HotelGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HotelGame-1.mp4" }
                     },
                     {
                         title: "Customer Uses Toilets",
                         description: "Customers use hotel facilities like toilets after resting in their rooms.",
-                        media: { type: "video", src: "/Assets/AllRecording/HotelGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HotelGame-2.mp4" }
                     },
                     {
                         title: "Rooms and Tips",
                         description: "Customers rest in their rented rooms and leave tips after their stay. However, the rooms are left messy and need cleaning.",
-                        media: { type: "image", src: "/Assets/hotelGame/2.jpg" }
+                        media: { type: "image", src: "Assets/hotelGame/2.jpg" }
                     },
                     {
                         title: "Hire Cleaners",
                         description: "Hire and manage cleaners to ensure rooms are cleaned and ready for the next guests.",
-                        media: { type: "image", src: "/Assets/hotelGame/3.jpg" }
+                        media: { type: "image", src: "Assets/hotelGame/3.jpg" }
                     },
                     {
                         title: "Toilet Paper Supplies",
                         description: "Restock toilet paper to ensure all customer needs are met and bathrooms remain functional.",
-                        media: { type: "video", src: "/Assets/AllRecording/HotelGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HotelGame-3.mp4" }
                     },
                     {
                         title: "Restaurants and Shops",
                         description: "Set up restaurants where guests can dine and enjoy delicious food during their stay.",
-                        media: { type: "image", src: "/Assets/hotelGame/4.jpg" }
+                        media: { type: "image", src: "Assets/hotelGame/4.jpg" }
                     },
                     {
                         title: "Parking and Tolls",
                         description: "Manage parking spaces and collect tolls for incoming cars to ensure smooth operations.",
-                        media: { type: "image", src: "/Assets/hotelGame/5.jpg" }
+                        media: { type: "image", src: "Assets/hotelGame/5.jpg" }
                     },
                     {
                         title: "Manage Parking Tolls",
                         description: "Attend to the tolls and manage the parking spaces efficiently.",
-                        media: { type: "video", src: "/Assets/AllRecording/HotelGame-4.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/HotelGame-4.mp4" }
                     }
                 ]
             },
             game6: {
             title: "Hunter Assassin 3D",
-            image: { type: "image", src: "/Assets/HeadIcons/HunterGame.jpg" },
-            downloadLink: "/Assets/hunterGame/Build/HunterAssassin.apk",
+            image: { type: "image", src: "Assets/HeadIcons/HunterGame.jpg" },
+            downloadLink: "Assets/hunterGame/Build/HunterAssassin.apk",
             sections: [
                 {
                     title: "Stealth Kills",
                     description: "Sneak through guards and silently take them down to proceed undetected.",
-                    media: { type: "image", src: "/Assets/hunterGame/1.jpg" }
+                    media: { type: "image", src: "Assets/hunterGame/1.jpg" }
                 },
                 {
                     title: "Eliminate Guards and Collect Gems",
                     description: "Eliminate all guards without being caught and collect gems as rewards.",
-                    media: { type: "video", src: "/Assets/AllRecording/HunterGame-1.mp4" }
+                    media: { type: "video", src: "Assets/AllRecording/HunterGame-1.mp4" }
                 },
                 {
                     title: "Smart Guard AI",
                     description: "Guards with advanced AI detect nearby kills and get alerted, making the game more challenging.",
-                    media: { type: "image", src: "/Assets/hunterGame/2.jpg" }
+                    media: { type: "image", src: "Assets/hunterGame/2.jpg" }
                 },
                 {
                     title: "Power-ups for Strategic Gameplay",
                     description: "Use various power-ups like camouflage to create interesting and dynamic gameplay scenarios.",
-                    media: { type: "video", src: "/Assets/AllRecording/HunterGame-2.mp4" }
+                    media: { type: "video", src: "Assets/AllRecording/HunterGame-2.mp4" }
                 },
                 {
                     title: "Camouflage Abilities",
                     description: "Camouflage can blind guards and bypass dangerous traps unnoticed.",
-                    media: { type: "image", src: "/Assets/hunterGame/3.jpg" }
+                    media: { type: "image", src: "Assets/hunterGame/3.jpg" }
                 },
                 {
                     title: "Security and Laser Traps",
                     description: "Navigate through different traps like security cameras and laser detection, which can alert all guards.",
-                    media: { type: "video", src: "/Assets/AllRecording/HunterGame-3.mp4" }
+                    media: { type: "video", src: "Assets/AllRecording/HunterGame-3.mp4" }
                 },
                 {
                     title: "Variety of Guards and Weapons",
                     description: "Face different guards equipped with various weapons that deal different levels of damage.",
-                    media: { type: "image", src: "/Assets/hunterGame/4.jpg" }
+                    media: { type: "image", src: "Assets/hunterGame/4.jpg" }
                 },
                 {
                     title: "Advanced Power-ups and Mutant Abilities",
                     description: "Unlock additional power-ups like mutant abilities to phase through walls and plant landmines to eliminate guards.",
-                    media: { type: "video", src: "/Assets/AllRecording/HunterGame-4.mp4" }
+                    media: { type: "video", src: "Assets/AllRecording/HunterGame-4.mp4" }
                 }
             ]
         },
             game7: {
                 title: "Kart Game",
-                image: { type: "image", src: "/Assets/HeadIcons/KartGame.jpg" },
-                downloadLink: "/Assets/kartGame/Build/KartGame.apk",
+                image: { type: "image", src: "Assets/HeadIcons/KartGame.jpg" },
+                downloadLink: "Assets/kartGame/Build/KartGame.apk",
                 sections: [
                     {
                         title: "Exciting Racing Track Maps",
                         description: "Race through dynamic and thrilling maps that challenge your driving skills.",
-                        media: { type: "image", src: "/Assets/KartGame/1.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/1.jpg" }
                     },
                     {
                         title: "Weaponized Kart Battles",
                         description: "Use a variety of weapons to smash AI opponents and secure victory.",
-                        media: { type: "video", src: "/Assets/AllRecording/KartGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-1.mp4" }
                     },
                     {
                         title: "Smash and Bash Mechanics",
                         description: "Collide with opponents to slow them down and gain an advantage.",
-                        media: { type: "image", src: "/Assets/KartGame/2.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/2.jpg" }
                     },
                     {
                         title: "Machine Guns in Action",
                         description: "Fire rapid rounds from mounted machine guns to eliminate enemy karts.",
-                        media: { type: "video", src: "/Assets/AllRecording/KartGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-2.mp4" }
                     },
                     {
                         title: "Unique Power-ups and Weapons",
                         description: "Collect powerful weapons like rockets, machine guns, and mines to dominate the race.",
-                        media: { type: "image", src: "/Assets/KartGame/3.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/3.jpg" }
                     },
                     {
                         title: "Battle Mode with Epic Smashes",
                         description: "Unleash chaos in battle mode by smashing into rival karts and using advanced weapons.",
-                        media: { type: "image", src: "/Assets/KartGame/4.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/4.jpg" }
                     },
                     {
                         title: "Mid-Bullet Guns for Precision",
                         description: "Use precision mid-bullet guns to take down opponents at a medium range.",
-                        media: { type: "video", src: "/Assets/AllRecording/KartGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-3.mp4" }
                     },
                     {
                         title: "Defensive and Offensive Strategies",
                         description: "Use shields, speed boosts, and traps to outsmart your opponents.",
-                        media: { type: "image", src: "/Assets/KartGame/5.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/5.jpg" }
                     },
                     {
                         title: "Long-Range Missile Mayhem",
                         description: "Fire powerful missiles at distant enemies to gain control of the race.",
-                        media: { type: "video", src: "/Assets/AllRecording/KartGame-4.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-4.mp4" }
                     }
                 ]
             },
             game8: {
                 title: "Shopping Mall",
-                image: { type: "image", src: "/Assets/HeadIcons/MallGame.jpg" },
-                downloadLink: "/Assets/mallGame/Build/ShoppingManager.apk",
+                image: { type: "image", src: "Assets/HeadIcons/MallGame.jpg" },
+                downloadLink: "Assets/mallGame/Build/ShoppingManager.apk",
                 sections: [
                     {
                         title: "Welcoming Reception with AI Assistants",
                         description: "Experience a seamless customer journey with AI-powered receptionists assisting visitors.",
-                        media: { type: "image", src: "/Assets/mallGame/1.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/1.jpg" }
                     },
                     {
                         title: "Diverse Store Stands for Customer Shopping",
                         description: "Offer a wide variety of items through multiple store stands that attract customers.",
-                        media: { type: "image", src: "/Assets/mallGame/2.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/2.jpg" }
                     },
                     {
                         title: "Well-Managed Item Godowns",
                         description: "Maintain a stock of items in organized godowns for easy access and replenishment.",
-                        media: { type: "image", src: "/Assets/mallGame/3.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/3.jpg" }
                     },
                     {
                         title: "Customizing Store Stands to Enhance Shopping",
                         description: "Upgrade and personalize store stands to attract more customers and improve sales.",
-                        media: { type: "video", src: "/Assets/AllRecording/MallGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/MallGame-1.mp4" }
                     },
                     {
                         title: "Dual Receptions for Handling More Customers",
                         description: "Boost efficiency with dual reception desks to accommodate high customer traffic.",
-                        media: { type: "image", src: "/Assets/mallGame/4.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/4.jpg" }
                     },
                     {
                         title: "Item and Tile Customization Options",
                         description: "Add flair to your mall by customizing item displays and floor tiles for a unique ambiance.",
-                        media: { type: "video", src: "/Assets/AllRecording/MallGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/MallGame-2.mp4" }
                     },
                     {
                         title: "Hire Helpers and Upgrade Rooms",
                         description: "Increase efficiency by hiring helpers and upgrading rooms to provide top-notch service.",
-                        media: { type: "video", src: "/Assets/AllRecording/MallGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/MallGame-3.mp4" }
                     }
                 ]
             },
             game9: {
                 title: "Ski Resort",
-                image: { type: "image", src: "/Assets/HeadIcons/SkiGame.jpg" },
-                downloadLink: "/Assets/skiGame/Build/SkiResort.apk",
+                image: { type: "image", src: "Assets/HeadIcons/SkiGame.jpg" },
+                downloadLink: "Assets/skiGame/Build/SkiResort.apk",
                 sections: [
                     {
                         title: "Reception for Seamless Check-ins",
                         description: "Greet customers at the well-managed reception and ensure a smooth check-in experience.",
-                        media: { type: "image", src: "/Assets/skiGame/1.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/1.jpg" }
                     },
                     {
                         title: "Parking System Management",
                         description: "Handle the parking system efficiently by managing entry, space, and vehicle control.",
-                        media: { type: "video", src: "/Assets/AllRecording/SkiGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-1.mp4" }
                     },
                     {
                         title: "Ski Board Supply for Adventurous Customers",
                         description: "Provide high-quality ski boards to customers for an unforgettable skiing experience.",
-                        media: { type: "image", src: "/Assets/skiGame/2.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/2.jpg" }
                     },
                     {
                         title: "Ski Board Supply Near Ski Lift",
                         description: "Set up a convenient station near the ski lift to supply ski boards on demand.",
-                        media: { type: "video", src: "/Assets/AllRecording/SkiGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-2.mp4" }
                     },
                     {
                         title: "Ski Lift Ride for Customers",
                         description: "Enjoy the scenic ride up the ski lift before hitting the slopes for adventure.",
-                        media: { type: "image", src: "/Assets/skiGame/3.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/3.jpg" }
                     },
                     {
                         title: "Parking Tolls at Entry Point",
                         description: "Manage the influx of vehicles with efficient parking tolls to ensure smooth entry.",
-                        media: { type: "image", src: "/Assets/skiGame/4.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/4.jpg" }
                     },
                     {
                         title: "Ski Mobile for Snow Shoveling and Sales",
                         description: "Use the ski mobile to shove snow and sell it to vendors for extra revenue.",
-                        media: { type: "video", src: "/Assets/AllRecording/SkiGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-3.mp4" }
                     },
                     {
                         title: "Happy Customers Enjoying Skiing",
                         description: "Watch your satisfied customers glide down the snowy slopes and enjoy their time.",
-                        media: { type: "image", src: "/Assets/skiGame/5.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/5.jpg" }
                     },
                     {
                         title: "Hire AI Helpers and Upgrade Efficiency",
                         description: "Upgrade your resort by hiring AI helpers and improving speed, capacity, and services.",
-                        media: { type: "video", src: "/Assets/AllRecording/SkiGame-4.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-4.mp4" }
                     }
                 ]
             },
             game10: {
                 title: "Track & Field",
-                image: { type: "image", src: "/Assets/HeadIcons/TrackGame.jpg" },
-                downloadLink: "/Assets/trackGame/Build/TrackGame.apk",
+                image: { type: "image", src: "Assets/HeadIcons/TrackGame.jpg" },
+                downloadLink: "Assets/trackGame/Build/TrackGame.apk",
                 sections: [
                     {
                         title: "Run Dash to the Finish Line",
                         description: "Push your stamina and speed to the limit in an exhilarating dash toward victory.",
-                        media: { type: "image", src: "/Assets/trackGame/1.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/1.jpg" }
                     },
                     {
                         title: "Pass the Hurdles While Managing Stamina",
                         description: "Carefully time your jumps over hurdles while monitoring stamina to avoid exhaustion.",
-                        media: { type: "video", src: "/Assets/AllRecording/TrackGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/TrackGame-1.mp4" }
                     },
                     {
                         title: "Hurdle Dash Challenge",
                         description: "Clear a series of hurdles while maintaining momentum and balance.",
-                        media: { type: "image", src: "/Assets/trackGame/2.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/2.jpg" }
                     },
                     {
                         title: "Stadium with Vibrant City Environment",
                         description: "Compete in a stadium surrounded by a bustling cityscape, enhancing the excitement.",
-                        media: { type: "image", src: "/Assets/trackGame/3.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/3.jpg" }
                     },
                     {
                         title: "Lively Crowd Cheering for Players",
                         description: "Feel the energy of an enthusiastic crowd that cheers players on during the game.",
-                        media: { type: "image", src: "/Assets/trackGame/4.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/4.jpg" }
                     },
                     {
                         title: "Player Celebrates with Victory Dance",
                         description: "Celebrate a well-deserved win with fun and energetic victory dances.",
-                        media: { type: "video", src: "/Assets/AllRecording/TrackGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/TrackGame-2.mp4" }
                     },
                     {
                         title: "Sportsmanship and Stamina Balance",
                         description: "Master the art of balancing stamina and maintaining good sportsmanship.",
-                        media: { type: "image", src: "/Assets/trackGame/5.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/5.jpg" }
                     }
                 ]
             }
