@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Gallery</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projects.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
     <!-- ================================
     🌟 NAVBAR SECTION START
     ==================================== -->
-    <nav class="text-center text-xl py-2 sticky top-0 z-50 shadow-lg"
+    <nav class="text-center text-xl py-2 top-0 z-50 shadow-lg"
         style="background-image: repeating-linear-gradient(-45deg, #242728, #242728 6px, #1f2223 0px, #1f2223 12px);">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-2">
@@ -92,24 +93,34 @@
     <!-- ================================
     🌟 NAVBAR SECTION END
     ==================================== -->
+
+
+
+
     <div class="mx-auto w-full h-auto" style="background-color: rgb(0, 128, 255);">
 
-        <div class="mx-auto w-full h-auto bg-tile-animation-LeftDown" style="background-image: url('Assets/download-blue.png');">
+        <div class="mx-auto w-full h-auto bg-tile-animation-LeftDown"
+            style="background-image: url('Assets/download-blue.png');">
+            <!-- Dynamic Game Section -->
+            <div id="game-section-container" class="w-full h-auto px-4 sm:px-6 lg:px-8"
+                style="background-color: rgb(0, 128, 255); padding-top: 15px;">
+                <!-- Selected game section will be loaded here -->
+            </div>
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 w-full h-auto">
                 <div id="game-grid"
                     class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-1 gap-y-8 p-4 sm:p-6 md:p-8">
                     <!-- Game cards inserted dynamically -->
                 </div>
             </div>
-    
-            <!-- Dynamic Game Section -->
-            <div id="game-section-container" class="w-full h-auto px-4 sm:px-6 lg:px-8" style="background-color: rgb(0, 128, 255); padding-top: 15px;" >
-                <!-- Selected game section will be loaded here -->
-                 
-                 
-            </div>
         </div>
-        
+    </div>
+    <span class="toggle-container" style="display: bl;">
+        <input type="checkbox" id="modeToggle" class="toggle-input">
+        <label for="modeToggle" class="toggle-label">
+            <span class="toggle-text text-center" style="padding: 20px;">NOR</span>
+        </label>
+    </span>
+
 
     <!-- ================================
     🌟 FOOTER SECTION START
@@ -163,44 +174,48 @@
                         <!-- Add more social icons here if needed -->
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </footer>
     <!-- ================================
     🌟 FOOTER SECTION END
     ==================================== -->
-    </div>
     <script>
         const games = {
             game1: {
                 title: "BomberMan",
                 image: { type: "image", src: "Assets/HeadIcons/BomberGame.jpg" },
-                downloadLink: "#",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Procedurally Generated Maps",
                         description: "Experience unique gameplay each time with dynamically generated levels that challenge your strategy.",
+                        descriptionDev: "The map generates by placing outer walls, inner walls at even coordinates, and randomly spawning breakable objects while ensuring no breakables are placed next to start positions. Player start points, the goal, and the door are placed at predefined locations with some randomness, ensuring fair gameplay and progression.",
                         media: { type: "image", src: "Assets/BomberGame/1.jpg" }
                     },
                     {
                         title: "Joystick and Bomb Button Controls",
                         description: "Use the joystick to navigate through the maze and plant bombs strategically near wooden boxes.",
+                        descriptionDev: "A simple joystick and bomb button allow the player to move within the boundary. Bombs are spawned at the front position where the player is looking, and the position is rounded to align precisely within the grid map to ensure consistent placement and explosion effects.",
                         media: { type: "video", src: "Assets/AllRecording/BomberMan-1.mp4" }
                     },
                     {
                         title: "Bomb Explosion VFX",
                         description: "Enjoy stunning visual effects with each explosion, adding dynamic random colors with excitement to your bombing spree.",
+                        descriptionDev: "The explosion VFX randomly changes bright colors on each detonation to maintain a visually dynamic and engaging environment. The particle system uses a color array with randomized selection to enhance the excitement of destruction.",
                         media: { type: "image", src: "Assets/BomberGame/2.jpg" }
                     },
                     {
                         title: "Mystery Box Rewards",
                         description: "Destroy mystery boxes to unlock and collect random special power-ups that boost your abilities.",
+                        descriptionDev: "The mystery box contains an array of power-up strings, and one is randomly selected and spawned when the box is destroyed. The power-up quickly attaches and activates on the player or AI responsible for the explosion by taking its object reference, allowing immediate benefit to the entity.",
                         media: { type: "video", src: "Assets/AllRecording/BomberMan-2.mp4" }
                     },
                     {
                         title: "Power-ups and Boosts",
                         description: "Collect various power-ups, such as shields, extra damage, and extra lives to enhance your gameplay.",
+                        descriptionDev: "Each power-up is managed using an IEnumerator that handles the duration of the effect. On time-up, the power-up is deactivated and destroyed. The shield power-up enables a boolean that prevents the player or AI from taking damage. The Power power-up increases the bomb damage by 1, allowing it to destroy two blocks in total, enhancing the player's offensive capabilities.",
                         media: { type: "image", src: "Assets/BomberGame/3.jpg" }
                     }
                 ]
@@ -208,98 +223,115 @@
             game2: {
                 title: "Burger Shop",
                 image: { type: "image", src: "Assets/HeadIcons/BurgerGame.jpg" },
-                downloadLink: "Assets/burgerGame/Build/BurgerManager.apk",
+                downloadLink: "https://drive.google.com/file/d/14Q3SGXL0Bqo4jTX7FYmiiI82b1oT8am6/view?usp=drive_link",
                 sections: [
                     {
                         title: "Serve Burgers to Customers",
                         description: "Prepare and serve delicious burgers to customers while keeping up with demand.",
+                        descriptionDev: "Customers spawn and navigate to the reception using a NavMeshAgent, targeting a stack point where burgers pile up. Multiple reference points such as entry and exit ensure smooth movement. The receptionist serves as long as there are customers in queue, determining service order based on the customer's 'burger_taken' variable.",
                         media: { type: "image", src: "Assets/BurgerGame/1.jpg" }
                     },
                     {
                         title: "Faster Service, Happier Customers",
                         description: "Speed up service to keep your customers satisfied and coming back for more.",
+                        descriptionDev: "The grill spawns burgers in a grid formation when the player is near. Burgers attach to the player as a parent object when collected. The player stacks them at reception, but carries a limited number—an upgradable feature for progression.",
                         media: { type: "video", src: "Assets/AllRecording/BurgerGame-1.mp4" }
                     },
                     {
                         title: "Dine-in with Customizable Chairs",
                         description: "Allow customers to enjoy their meals with cozy, customizable seating arrangements.",
+                        descriptionDev: "Each customer has an array of tasks, including taking a burger, going to a table, sitting, and leaving the shop. An additional array tracks available seats to ensure proper seating mechanics.",
                         media: { type: "image", src: "Assets/BurgerGame/2.jpg" }
-                    },
-                    {
-                        title: "Drive-Thru and Reception Service",
-                        description: "Juggle between serving walk-in customers and fulfilling drive-thru orders efficiently.",
-                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-2.mp4" }
                     },
                     {
                         title: "Provide Drive-Thru Service",
                         description: "Serve burgers quickly through the drive-thru window to keep the line moving.",
+                        descriptionDev: "Drive-thru customers spawn and move along a Dolly Track, making them ready to take orders. AI helpers exist with an array of tasks such as supplying burgers at the counter and drive-thru. These helpers prioritize the first available task and remain idle otherwise.",
                         media: { type: "image", src: "Assets/BurgerGame/3.jpg" }
+                    },
+                    {
+                        title: "Drive-Thru and Reception Service",
+                        description: "Juggle between serving walk-in customers and fulfilling drive-thru orders efficiently.",
+                        descriptionDev: "The reception mechanic for drive-thru is the same as for walk-in customers. The system efficiently manages service across both areas, ensuring smooth gameplay.",
+                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-2.mp4" }
                     },
                     {
                         title: "Parcel and Serve at Drive-Thru Counter",
                         description: "Prepare and pack orders for drive-thru customers, ensuring timely delivery.",
+                        descriptionDev: "An order preparation section stacks a tray with burgers in a set formation. The player must transport this prepared order to the reception counter, following the same mechanics as regular counter service.",
                         media: { type: "image", src: "Assets/BurgerGame/4.jpg" }
-                    },
-                    {
-                        title: "Clear Trash After Customer Leaves",
-                        description: "Maintain cleanliness by disposing of trash once customers are done dining.",
-                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-3.mp4" }
                     },
                     {
                         title: "Fast Service Leads to Happy Customers",
                         description: "Efficient service ensures customers leave with a smile and positive experience.",
+                        descriptionDev: "The receptionist for the drive-thru operates with the same logic as the main reception. It ensures seamless integration of both service areas without duplicating mechanics.",
                         media: { type: "image", src: "Assets/BurgerGame/5.jpg" }
+                    },
+                    {
+                        title: "Clear Trash After Customer Leaves",
+                        description: "Maintain cleanliness by disposing of trash once customers are done dining.",
+                        descriptionDev: "When a customer leaves, a trash paper prefab spawns at their table, marking it as 'uncleaned'. Until the trash is collected by either the player or an AI helper, the available seats array excludes that spot from new customer assignments, ensuring realistic cleanup mechanics.",
+                        media: { type: "video", src: "Assets/AllRecording/BurgerGame-3.mp4" }
                     }
                 ]
             },
             game3: {
                 title: "Hide N Seek",
                 image: { type: "image", src: "Assets/HeadIcons/HideGame.jpg" },
-                downloadLink: "Assets/hideGame/Build/HideFindSeek-4.apk",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Seeker Catches and Hider Hides",
                         description: "The seeker tries to catch the hiders while the hiders find the best spots to avoid detection.",
+                        descriptionDev: "Players use a script that selects a random point on the NavMesh within a certain range, continuously moving them around the map. The hider has a radar to detect seekers, but in seeker mode, the player cannot see hiders directly, making the game more challenging.",
                         media: { type: "image", src: "Assets/hideGame/1.jpg" }
                     },
                     {
                         title: "Collect and Drop Gems",
                         description: "Hiders can collect gems scattered across the map and drop them into designated boxes to gain points.",
+                        descriptionDev: "In hider mode, collision detection is used to collect gems. The gem is attached near the player's hand and, when near a box, is placed inside it. The hider then moves to a point inside a cardboard box, where the gem is destroyed, reducing the gem count by one.",
                         media: { type: "image", src: "Assets/hideGame/2.jpg" }
                     },
                     {
                         title: "Gameplay Overview and Game Loop",
                         description: "Watch an overview showcasing the game's mechanics, seeker and hider interactions, and strategy.",
+                        descriptionDev: "The game loop is structured with seekers and hiders actively navigating the environment. Randomized movement, player interactions, and power-ups ensure dynamic gameplay, keeping each round unpredictable and engaging.",
                         media: { type: "video", src: "Assets/AllRecording/HideGame-1.mp4" }
                     },
                     {
                         title: "Rescue Caged Hiders",
                         description: "When caught, hiders are placed in cages. Fellow hiders can attempt to free them before the game ends.",
+                        descriptionDev: "The seeker uses a radar system with two raycast spreads. On detecting a hider, movement is disabled, and a cage prefab spawns at the caught position. If another hider collides with a caged hider, the cage is destroyed, and the hider is freed.",
                         media: { type: "image", src: "Assets/hideGame/4.jpg" }
                     },
                     {
                         title: "Interactive Environment",
                         description: "Explore interactive surroundings, including swimming pools, hidden tunnels, and obstacles to aid hiders.",
+                        descriptionDev: "Doors are implemented to rotate in the opposite angle of the collision point and slowly return to their original position with an oscillatory dampening effect. The swimming pool triggers a swimming animation when a player collides with the water surface.",
                         media: { type: "image", src: "Assets/hideGame/5.jpg" }
                     },
                     {
                         title: "Speed Boost Power-up",
                         description: "Grab the speed boost to increase movement, helping seekers catch hiders or hiders rescue teammates quickly.",
+                        descriptionDev: "The speed boost power-up increases the player's movement speed for a limited time. It also triggers a running animation instead of the default walking animation until the timer expires.",
                         media: { type: "video", src: "Assets/AllRecording/HideGame-2.mp4" }
                     },
                     {
                         title: "Camouflage Power-up",
                         description: "Use the camouflage ability to move stealthily and avoid being spotted by the seeker.",
+                        descriptionDev: "The camouflage power-up replaces all player materials with a transparent material and changes the physical layer of the player to be excluded from seeker raycast detection. The effect lasts for a set duration before reverting.",
                         media: { type: "image", src: "Assets/hideGame/6.jpg" }
                     },
                     {
                         title: "Mutant Ability Power-up",
                         description: "Activate the mutant ability to phase through walls, enabling quick escapes and creative hiding tactics.",
+                        descriptionDev: "The mutant power-up changes the player's physics layer to one that is included in raycast detection but does not alter the material, allowing them to phase through certain objects and strategically escape seekers.",
                         media: { type: "image", src: "Assets/hideGame/7.jpg" }
                     },
                     {
                         title: "Interesting Level Designs",
                         description: "Explore engaging and creatively designed 10 levels that offer diverse hiding spots and dynamic environments.",
+                        descriptionDev: "All levels are designed with a bright, visually appealing environment that enhances the chase dynamics between hiders and seekers, ensuring fun and thrilling gameplay experiences.",
                         media: { type: "video", src: "Assets/AllRecording/HideGame-3.mp4" }
                     }
                 ]
@@ -307,26 +339,30 @@
             game4: {
                 title: "Hitman Go",
                 image: { type: "image", src: "Assets/HeadIcons/HitmanGame.jpg" },
-                downloadLink: "Assets/hitmanGame/Build/HitmanGame.apk" ,
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Move Strategically",
                         description: "Plan your moves carefully to avoid detection and complete your objective efficiently.",
+                        descriptionDev: "The player and enemies rotate one face direction at a time with each move. Enemy rotation directions are predefined—some rotate only to the front and right, while others rotate to the left and backwards. Movement is restricted to adjacent nodes aligned to the grid.",
                         media: { type: "image", src: "Assets/hitmanGame/1.jpg" }
                     },
                     {
                         title: "Assassinate Guards",
                         description: "Take out guards silently and eliminate threats to clear your path.",
+                        descriptionDev: "When the player moves to a nearby node where an enemy is positioned, and the enemy is facing in the opposite direction, the player automatically eliminates the enemy. However, if the enemy detects the player by moving toward them, the enemy kills the player.",
                         media: { type: "image", src: "Assets/hitmanGame/2.jpg" }
                     },
                     {
                         title: "Reach the Destination in Time",
                         description: "Time is of the essence—navigate through obstacles and reach your target before the clock runs out.",
+                        descriptionDev: "Player actions, including moving between nodes and enemy checks, are validated after each move. The game evaluates if the player has been detected or if the player has successfully reached the destination node.",
                         media: { type: "image", src: "Assets/hitmanGame/3.jpg" }
                     },
                     {
                         title: "Unique Level Designs",
                         description: "Explore 10 meticulously crafted levels, each offering new challenges and opportunities.",
+                        descriptionDev: "Levels are designed with diverse enemy placements, predefined enemy movement patterns, and strategically positioned nodes. The objective is to reach a predefined end node while overcoming various obstacles, regardless of whether all enemies are eliminated.",
                         media: { type: "video", src: "Assets/AllRecording/HitmanGame.mp4" }
                     }
                 ]
@@ -334,294 +370,346 @@
             game5: {
                 title: "Perfect Hotel",
                 image: { type: "image", src: "Assets/HeadIcons/HotelGame.jpg" },
-                downloadLink: "Assets/hotelGame/Build/HotelGame.apk",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Welcome and Check-in Customers",
                         description: "Greet customers and manage their check-ins to ensure a smooth and pleasant start to their stay.",
+                        descriptionDev: "The reception and customer system follows a similar concept to other games with variations in actions and animations. Upon check-in, customer tasks are queued for sequential execution.",
                         media: { type: "image", src: "Assets/hotelGame/1.jpg" }
                     },
                     {
                         title: "Check-in and Customer Arrival",
                         description: "Watch how customers check in and start their stay at the hotel.",
+                        descriptionDev: "Upon check-in, predefined customer actions like going to bed, using the toilet, dining, and exiting are triggered sequentially based on conditions and availability.",
                         media: { type: "video", src: "Assets/AllRecording/HotelGame-1.mp4" }
                     },
                     {
                         title: "Customer Uses Toilets",
                         description: "Customers use hotel facilities like toilets after resting in their rooms.",
+                        descriptionDev: "The toilet action uses basic entry/exit points with a toilet paper counter. After using the restroom, cash is left behind, and the toilet paper count decreases. When depleted, the player must refill it.",
                         media: { type: "video", src: "Assets/AllRecording/HotelGame-2.mp4" }
                     },
                     {
                         title: "Rooms and Tips",
                         description: "Customers rest in their rented rooms and leave tips after their stay. However, the rooms are left messy and need cleaning.",
+                        descriptionDev: "The 'go to bed' action uses predefined entry/exit points, wait times, and tip logic. After the customer leaves, the room status is marked as uncleaned, requiring a cleaner or player to clean it.",
                         media: { type: "image", src: "Assets/hotelGame/2.jpg" }
                     },
                     {
                         title: "Hire Cleaners",
                         description: "Hire and manage cleaners to ensure rooms are cleaned and ready for the next guests.",
+                        descriptionDev: "AI helpers (cleaners) follow a similar script to customer behavior but with a task set restricted to cleaning. Each cleaner operates independently, cleaning different areas in different rooms.",
                         media: { type: "image", src: "Assets/hotelGame/3.jpg" }
                     },
                     {
                         title: "Toilet Paper Supplies",
                         description: "Restock toilet paper to ensure all customer needs are met and bathrooms remain functional.",
+                        descriptionDev: "The player collects toilet paper stacks from the supply room, which attach to the player's stacker up to its limit. The player then moves to the toilet area to replenish the toilet paper stock.",
                         media: { type: "video", src: "Assets/AllRecording/HotelGame-3.mp4" }
                     },
                     {
                         title: "Restaurants and Shops",
                         description: "Set up restaurants where guests can dine and enjoy delicious food during their stay.",
+                        descriptionDev: "The restaurant uses logic similar to the reception, where the customer performs the dining action and leaves tips upon completion. Actions are queued and executed sequentially.",
                         media: { type: "image", src: "Assets/hotelGame/4.jpg" }
                     },
                     {
                         title: "Parking and Tolls",
                         description: "Manage parking spaces and collect tolls for incoming cars to ensure smooth operations.",
+                        descriptionDev: "Cars spawn and move along a dolly track similar to the burger game. The queue system advances when the player is present at the parking reception, maintaining similar reception logic.",
                         media: { type: "image", src: "Assets/hotelGame/5.jpg" }
                     },
                     {
                         title: "Manage Parking Tolls",
                         description: "Attend to the tolls and manage the parking spaces efficiently.",
+                        descriptionDev: "The parking system uses queue management logic that advances cars once the player is available at the toll. Car spawning and movement mimic the dolly track system used in previous games.",
                         media: { type: "video", src: "Assets/AllRecording/HotelGame-4.mp4" }
                     }
                 ]
             },
             game6: {
-            title: "Hunter Assassin 3D",
-            image: { type: "image", src: "Assets/HeadIcons/HunterGame.jpg" },
-            downloadLink: "Assets/hunterGame/Build/HunterAssassin.apk",
-            sections: [
-                {
-                    title: "Stealth Kills",
-                    description: "Sneak through guards and silently take them down to proceed undetected.",
-                    media: { type: "image", src: "Assets/hunterGame/1.jpg" }
-                },
-                {
-                    title: "Eliminate Guards and Collect Gems",
-                    description: "Eliminate all guards without being caught and collect gems as rewards.",
-                    media: { type: "video", src: "Assets/AllRecording/HunterGame-1.mp4" }
-                },
-                {
-                    title: "Smart Guard AI",
-                    description: "Guards with advanced AI detect nearby kills and get alerted, making the game more challenging.",
-                    media: { type: "image", src: "Assets/hunterGame/2.jpg" }
-                },
-                {
-                    title: "Power-ups for Strategic Gameplay",
-                    description: "Use various power-ups like camouflage to create interesting and dynamic gameplay scenarios.",
-                    media: { type: "video", src: "Assets/AllRecording/HunterGame-2.mp4" }
-                },
-                {
-                    title: "Camouflage Abilities",
-                    description: "Camouflage can blind guards and bypass dangerous traps unnoticed.",
-                    media: { type: "image", src: "Assets/hunterGame/3.jpg" }
-                },
-                {
-                    title: "Security and Laser Traps",
-                    description: "Navigate through different traps like security cameras and laser detection, which can alert all guards.",
-                    media: { type: "video", src: "Assets/AllRecording/HunterGame-3.mp4" }
-                },
-                {
-                    title: "Variety of Guards and Weapons",
-                    description: "Face different guards equipped with various weapons that deal different levels of damage.",
-                    media: { type: "image", src: "Assets/hunterGame/4.jpg" }
-                },
-                {
-                    title: "Advanced Power-ups and Mutant Abilities",
-                    description: "Unlock additional power-ups like mutant abilities to phase through walls and plant landmines to eliminate guards.",
-                    media: { type: "video", src: "Assets/AllRecording/HunterGame-4.mp4" }
-                }
-            ]
-        },
+                title: "Hunter Assassin 3D",
+                image: { type: "image", src: "Assets/HeadIcons/HunterGame.jpg" },
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
+                sections: [
+                    {
+                        title: "Stealth Kills",
+                        description: "Sneak through guards and silently take them down to proceed undetected.",
+                        media: { type: "image", src: "Assets/hunterGame/1.jpg" },
+                        descriptionDev: "The player uses joystick controls to move smoothly while remaining undetected by enemies. When the player collides with an enemy, the enemy is destroyed, increasing the kill count. Enemies have an idle state and shift to an alert state when detecting the player. Upon elimination, gems are dropped and collected by the player through collision, adding them to the gem pool."
+                    },
+                    {
+                        title: "Eliminate Guards and Collect Gems",
+                        description: "Eliminate all guards without being caught and collect gems as rewards.",
+                        media: { type: "video", src: "Assets/AllRecording/HunterGame-1.mp4" },
+                        descriptionDev: "Enemies move using NavMesh with predefined patrol points. On killing an enemy, gems spawn at the enemy's position and move toward the player using a tween or Lerp mechanic. The gems are collected through collision and added to the player's gem counter. Each kill triggers a check to alert nearby guards by sharing the player's last known position."
+                    },
+                    {
+                        title: "Smart Guard AI",
+                        description: "Guards with advanced AI detect nearby kills and get alerted, making the game more challenging.",
+                        media: { type: "image", src: "Assets/hunterGame/2.jpg" },
+                        descriptionDev: "Enemies operate in different states: idle, patrol, hunting, and shooting. Upon detecting the player or hearing a kill event, the AI moves to the last known location of the player, intelligently looking around corners and pausing to scan the area. Guards hunt for the player with a cooldown to return to patrol if the player is not found."
+                    },
+                    {
+                        title: "Power-ups for Strategic Gameplay",
+                        description: "Use various power-ups like camouflage to create interesting and dynamic gameplay scenarios.",
+                        media: { type: "video", src: "Assets/AllRecording/HunterGame-2.mp4" },
+                        descriptionDev: "Power-ups are handled with cooldown timers and are visually represented by circular progress bars attached to a world canvas within the player's object. When a power-up is equipped, it is enabled and the cooldown begins, with the progress bar showing time left for reuse."
+                    },
+                    {
+                        title: "Camouflage Abilities",
+                        description: "Camouflage can blind guards and bypass dangerous traps unnoticed.",
+                        media: { type: "image", src: "Assets/hunterGame/3.jpg" },
+                        descriptionDev: "The camouflage ability swaps all player materials to a transparent version and stores the original materials in an array. It also changes the player's physics layer to one that is not detected by enemy radar. On timer expiration, original materials and the initial physics layer are restored."
+                    },
+                    {
+                        title: "Security and Laser Traps",
+                        description: "Navigate through different traps like security cameras and laser detection, which can alert all guards.",
+                        media: { type: "video", src: "Assets/AllRecording/HunterGame-3.mp4" },
+                        descriptionDev: "Security cameras and lasers operate similarly to enemy radars, using raycasts to detect the player. If the player is spotted, a trigger alerts nearby guards, switching them to the hunting state and sending them toward the last known position."
+                    },
+                    {
+                        title: "Variety of Guards and Weapons",
+                        description: "Face different guards equipped with various weapons that deal different levels of damage.",
+                        media: { type: "image", src: "Assets/hunterGame/4.jpg" },
+                        descriptionDev: "Different enemy variations include modified animations, increased damage, and distinct sound effects. Enemy damage is applied based on the type of guard that detects or shoots the player. Weapon variety is handled by adjusting enemy attack range and bullet speed parameters."
+                    },
+                    {
+                        title: "Advanced Power-ups and Mutant Abilities",
+                        description: "Unlock additional power-ups like mutant abilities to phase through walls and plant landmines to eliminate guards.",
+                        media: { type: "video", src: "Assets/AllRecording/HunterGame-4.mp4" },
+                        descriptionDev: "Mutant abilities work similarly to camouflage but only change the physics layer without altering the material. The mutant layer allows the player to phase through walls and bypass radar detection. The mine power-up spawns a landmine prefab that triggers on collision with enemies, instantly eliminating them and triggering an explosion effect."
+                    }
+                ]
+            },
             game7: {
                 title: "Kart Game",
                 image: { type: "image", src: "Assets/HeadIcons/KartGame.jpg" },
-                downloadLink: "Assets/kartGame/Build/KartGame.apk",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Exciting Racing Track Maps",
                         description: "Race through dynamic and thrilling maps that challenge your driving skills.",
-                        media: { type: "image", src: "Assets/KartGame/1.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/1.jpg" },
+                        descriptionDev: "The track uses a mesh collider instead of a basic box collider, ensuring that the vehicle reacts dynamically to the curvature of the track. The kart's physics are adjusted to apply different friction values for different surfaces—higher speed on the track and reduced speed on grass or off-road areas."
                     },
                     {
                         title: "Weaponized Kart Battles",
                         description: "Use a variety of weapons to smash AI opponents and secure victory.",
-                        media: { type: "video", src: "Assets/AllRecording/KartGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-1.mp4" },
+                        descriptionDev: "Weapon systems use a modular approach where each weapon (missiles, machine guns, nukes, and more) inherits base properties such as collision detection, damage amount, and direction targeting. The projectiles use raycasts or physics-based collision to apply damage to enemy karts and reduce their health."
                     },
                     {
                         title: "Smash and Bash Mechanics",
                         description: "Collide with opponents to slow them down and gain an advantage.",
-                        media: { type: "image", src: "Assets/KartGame/2.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/2.jpg" },
+                        descriptionDev: "The collision system applies physics-based force on impact, slightly reducing the speed of the enemy kart while giving a minor boost to the attacking kart. The collision also triggers minor damage to the opponent’s health, and visual/audio feedback is triggered using particle effects and sound clips."
                     },
                     {
                         title: "Machine Guns in Action",
                         description: "Fire rapid rounds from mounted machine guns to eliminate enemy karts.",
-                        media: { type: "video", src: "Assets/AllRecording/KartGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-2.mp4" },
+                        descriptionDev: "The machine guns use a proximity detection system that detects nearby karts using an array or collider radius. Once the nearest kart is identified, the guns automatically rotate toward the target and shoot projectiles with a defined fire rate. The bullets are physics-based and apply small damage per hit."
                     },
                     {
                         title: "Unique Power-ups and Weapons",
                         description: "Collect powerful weapons like rockets, machine guns, and mines to dominate the race.",
-                        media: { type: "image", src: "Assets/KartGame/3.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/3.jpg" },
+                        descriptionDev: "Power-ups are randomly spawned at designated points on the track. When a kart picks up a power-up, it is stored in the kart’s inventory and automatically used based on predefined conditions. Power-ups include speed boosts, healing, and different weapons that alter gameplay strategies."
                     },
                     {
                         title: "Battle Mode with Epic Smashes",
                         description: "Unleash chaos in battle mode by smashing into rival karts and using advanced weapons.",
-                        media: { type: "image", src: "Assets/KartGame/4.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/4.jpg" },
+                        descriptionDev: "Battle mode introduces a free-for-all format where karts aggressively use weapons and bash into opponents. AI behavior adapts dynamically, using weapons immediately when available and targeting nearby karts. The AI uses reference points for movement and pathfinding while adding slight random variations for unpredictability."
                     },
                     {
                         title: "Mid-Bullet Guns for Precision",
                         description: "Use precision mid-bullet guns to take down opponents at a medium range.",
-                        media: { type: "video", src: "Assets/AllRecording/KartGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-3.mp4" },
+                        descriptionDev: "Mid-bullet guns use raycasts to determine hits at medium range. They prioritize the nearest target within a defined radius and shoot with high accuracy. Bullets travel in a straight line with medium speed and deal moderate damage upon collision."
                     },
                     {
                         title: "Defensive and Offensive Strategies",
                         description: "Use shields, speed boosts, and traps to outsmart your opponents.",
-                        media: { type: "image", src: "Assets/KartGame/5.jpg" }
+                        media: { type: "image", src: "Assets/KartGame/5.jpg" },
+                        descriptionDev: "Defensive power-ups like shields provide temporary invincibility by enabling a collider that blocks incoming damage. Speed boosts temporarily increase the kart’s max speed, while traps such as landmines can be placed to slow down or eliminate pursuing opponents."
                     },
                     {
                         title: "Long-Range Missile Mayhem",
                         description: "Fire powerful missiles at distant enemies to gain control of the race.",
-                        media: { type: "video", src: "Assets/AllRecording/KartGame-4.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/KartGame-4.mp4" },
+                        descriptionDev: "Missiles and nukes operate with high accuracy over long ranges. Unlike other projectiles, they are not affected by gravity, allowing for direct trajectories toward the target. Their high-speed movement ensures they hit targets faster, and they deal greater damage upon impact."
                     }
                 ]
             },
             game8: {
                 title: "Shopping Mall",
                 image: { type: "image", src: "Assets/HeadIcons/MallGame.jpg" },
-                downloadLink: "Assets/mallGame/Build/ShoppingManager.apk",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Welcoming Reception with AI Assistants",
                         description: "Experience a seamless customer journey with AI-powered receptionists assisting visitors.",
-                        media: { type: "image", src: "Assets/mallGame/1.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/1.jpg" },
+                        descriptionDev: "The reception system follows the same logic as the Burger and Hotel game. Customers check in at the reception, triggering their predefined movement towards store areas based on their needs. AI assistants help streamline the process, ensuring smooth customer flow."
                     },
                     {
                         title: "Diverse Store Stands for Customer Shopping",
                         description: "Offer a wide variety of items through multiple store stands that attract customers.",
-                        media: { type: "image", src: "Assets/mallGame/2.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/2.jpg" },
+                        descriptionDev: "Each store has a stacker system for managing item availability. When an item count reaches zero, the player or AI helper must restock it. The store logic ensures customers only pick available items, forcing timely restocking to maintain sales flow."
                     },
                     {
                         title: "Well-Managed Item Godowns",
                         description: "Maintain a stock of items in organized godowns for easy access and replenishment.",
-                        media: { type: "image", src: "Assets/mallGame/3.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/3.jpg" },
+                        descriptionDev: "The godown also follows a stacker system for each item type. When an item's stock reaches zero, an automated drone refills it dynamically. The drone logic ensures that different item types are refilled proportionally based on store demand."
                     },
                     {
                         title: "Customizing Store Stands to Enhance Shopping",
                         description: "Upgrade and personalize store stands to attract more customers and improve sales.",
-                        media: { type: "video", src: "Assets/AllRecording/MallGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/MallGame-1.mp4" },
+                        descriptionDev: "Customization works by enabling different graphical elements (GFX) as child objects within each store stand. When the player selects a customization option, the corresponding child element is activated with a buff VFX effect to highlight the upgrade."
                     },
                     {
                         title: "Dual Receptions for Handling More Customers",
                         description: "Boost efficiency with dual reception desks to accommodate high customer traffic.",
-                        media: { type: "image", src: "Assets/mallGame/4.jpg" }
+                        media: { type: "image", src: "Assets/mallGame/4.jpg" },
+                        descriptionDev: "Due to the large number of customers and store interactions, two reception desks operate simultaneously. Both receptions follow the same logic as in previous games, allowing customers to split across them, reducing queue congestion."
                     },
                     {
                         title: "Item and Tile Customization Options",
                         description: "Add flair to your mall by customizing item displays and floor tiles for a unique ambiance.",
-                        media: { type: "video", src: "Assets/AllRecording/MallGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/MallGame-2.mp4" },
+                        descriptionDev: "Similar to store customization, floor tiles can be changed based on player selection. The system simply changes the material of the tile object depending on the selected index, allowing for visual variety."
                     },
                     {
                         title: "Hire Helpers and Upgrade Rooms",
                         description: "Increase efficiency by hiring helpers and upgrading rooms to provide top-notch service.",
-                        media: { type: "video", src: "Assets/AllRecording/MallGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/MallGame-3.mp4" },
+                        descriptionDev: "The AI helper works similarly to the Burger game. It automatically executes available tasks, such as restocking store shelves from the godown. Upgrades allow increasing both player and helper speed and capacity, managed from the HR and upgrade room."
                     }
                 ]
             },
+
             game9: {
                 title: "Ski Resort",
                 image: { type: "image", src: "Assets/HeadIcons/SkiGame.jpg" },
-                downloadLink: "Assets/skiGame/Build/SkiResort.apk",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Reception for Seamless Check-ins",
                         description: "Greet customers at the well-managed reception and ensure a smooth check-in experience.",
-                        media: { type: "image", src: "Assets/skiGame/1.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/1.jpg" },
+                        descriptionDev: "The reception system follows the same logic as the Burger and Hotel games. Customers queue up and proceed to the reception counter, triggering their predefined journey towards various attractions like the ski lift and parking system. AI helpers can assist with check-ins if upgraded."
                     },
                     {
                         title: "Parking System Management",
                         description: "Handle the parking system efficiently by managing entry, space, and vehicle control.",
-                        media: { type: "video", src: "Assets/AllRecording/SkiGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-1.mp4" },
+                        descriptionDev: "The parking system operates similarly to the Burger game, where vehicles enter through a toll, drop cash after parking, and occupy available slots. The vehicle AI uses a nav mesh to move towards empty spots and exits after a set duration. Once the parking toll is upgraded, it handles multiple cars faster."
                     },
                     {
                         title: "Ski Board Supply for Adventurous Customers",
                         description: "Provide high-quality ski boards to customers for an unforgettable skiing experience.",
-                        media: { type: "image", src: "Assets/skiGame/2.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/2.jpg" },
+                        descriptionDev: "The AI helper retrieves ski boards from the nearest available stack. The system uses a randomizer to select a stack, preventing overuse of a single stack. Once retrieved, the helper moves towards the ski lift to provide ski boards to waiting customers."
                     },
                     {
                         title: "Ski Board Supply Near Ski Lift",
                         description: "Set up a convenient station near the ski lift to supply ski boards on demand.",
-                        media: { type: "video", src: "Assets/AllRecording/SkiGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-2.mp4" },
+                        descriptionDev: "The ski lift supply station serves as a collection point for customers. The ski board logic detects when customers approach and automatically deducts one pair of skis from the available stack. If the stack is empty, AI helpers restock it dynamically."
                     },
                     {
                         title: "Ski Lift Ride for Customers",
                         description: "Enjoy the scenic ride up the ski lift before hitting the slopes for adventure.",
-                        media: { type: "image", src: "Assets/skiGame/3.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/3.jpg" },
+                        descriptionDev: "Customers follow a predefined nav mesh path to the ski lift after collecting their ski boards. The ski lift animation triggers once customers board, carrying them to the top of the slope. On arrival, customers jump off, follow a dolly track down the slope, and exit the resort."
                     },
                     {
                         title: "Parking Tolls at Entry Point",
                         description: "Manage the influx of vehicles with efficient parking tolls to ensure smooth entry.",
-                        media: { type: "image", src: "Assets/skiGame/4.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/4.jpg" },
+                        descriptionDev: "The parking tolls use a queue system, processing multiple vehicles simultaneously. When a vehicle enters the resort, it triggers a toll event, drops cash, and proceeds to the next available parking slot. As upgrades are applied, tolls process vehicles faster and handle higher volumes."
                     },
                     {
                         title: "Ski Mobile for Snow Shoveling and Sales",
                         description: "Use the ski mobile to shove snow and sell it to vendors for extra revenue.",
-                        media: { type: "video", src: "Assets/AllRecording/SkiGame-3.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-3.mp4" },
+                        descriptionDev: "The snowmobile acts like the player but with a larger movement radius and unique physics. It leaves tire trails using a trail renderer, and a large snowball in front increases in scale dynamically as the vehicle collects snow. The snowball's size determines the money gained when sold to vendors, creating a scaling reward system."
                     },
                     {
                         title: "Happy Customers Enjoying Skiing",
                         description: "Watch your satisfied customers glide down the snowy slopes and enjoy their time.",
-                        media: { type: "image", src: "Assets/skiGame/5.jpg" }
+                        media: { type: "image", src: "Assets/skiGame/5.jpg" },
+                        descriptionDev: "Customers follow an automated nav mesh route after skiing down the slope, transitioning to a dolly track animation. Their states include skiing, idle, and leaving the resort. Customer satisfaction is increased based on fast service, successful ski board supply, and smooth entry through the reception and parking system."
                     },
                     {
                         title: "Hire AI Helpers and Upgrade Efficiency",
                         description: "Upgrade your resort by hiring AI helpers and improving speed, capacity, and services.",
-                        media: { type: "video", src: "Assets/AllRecording/SkiGame-4.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/SkiGame-4.mp4" },
+                        descriptionDev: "The HR room manages helper upgrades and spawns additional helpers. As upgrades increase, helper speed, carrying capacity, and task efficiency improve. Similarly, player stats such as movement speed and collection capacity increase dynamically through upgrades applied in the HR and upgrade room."
                     }
                 ]
             },
             game10: {
                 title: "Track & Field",
                 image: { type: "image", src: "Assets/HeadIcons/TrackGame.jpg" },
-                downloadLink: "Assets/trackGame/Build/TrackGame.apk",
+                downloadLink: "https://drive.google.com/drive/folders/1W1SP5PXygIhWujFKkXaW-3pW2np9P-xF?usp=drive_link",
                 sections: [
                     {
                         title: "Run Dash to the Finish Line",
                         description: "Push your stamina and speed to the limit in an exhilarating dash toward victory.",
-                        media: { type: "image", src: "Assets/trackGame/1.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/1.jpg" },
+                        descriptionDev: "The stadium uses a dolly track that moves the player along a predefined path. The run dash mode tracks tap input for speed adjustments. Each tap reduces stamina and move speed by a small amount (but not below a defined minimum value). If the player stops tapping, stamina regenerates slowly, capping at a defined maximum."
                     },
                     {
                         title: "Pass the Hurdles While Managing Stamina",
                         description: "Carefully time your jumps over hurdles while monitoring stamina to avoid exhaustion.",
-                        media: { type: "video", src: "Assets/AllRecording/TrackGame-1.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/TrackGame-1.mp4" },
+                        descriptionDev: "In hurdle jump mode, the player performs a local jump using an upward force on key press. If the player collides with a hurdle during the jump, their speed is instantly reduced to zero, forcing the player to build momentum again. Timing and stamina management play a critical role in maintaining pace."
                     },
                     {
                         title: "Hurdle Dash Challenge",
                         description: "Clear a series of hurdles while maintaining momentum and balance.",
-                        media: { type: "image", src: "Assets/trackGame/2.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/2.jpg" },
+                        descriptionDev: "Hurdle dash mode places obstacles at fixed intervals along the dolly path. Each hurdle has a collider that triggers a speed reset if not cleared successfully. Jumping over hurdles uses a local animation with controlled vertical force, and missing multiple hurdles significantly affects overall time and position."
                     },
                     {
                         title: "Stadium with Vibrant City Environment",
                         description: "Compete in a stadium surrounded by a bustling cityscape, enhancing the excitement.",
-                        media: { type: "image", src: "Assets/trackGame/3.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/3.jpg" },
+                        descriptionDev: "The stadium is surrounded by a vibrant city environment with animated cars and background elements that provide a lively atmosphere. The cars follow a looping animation on predefined paths to simulate traffic, while environmental sounds add depth to the scene."
                     },
                     {
                         title: "Lively Crowd Cheering for Players",
                         description: "Feel the energy of an enthusiastic crowd that cheers players on during the game.",
-                        media: { type: "image", src: "Assets/trackGame/4.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/4.jpg" },
+                        descriptionDev: "The crowd uses pre-animated loops with multiple cheering variations. Randomized sfx are played at intervals to create an immersive atmosphere. The animation speed can be adjusted dynamically based on the player's position or proximity to the finish line to increase excitement."
                     },
                     {
                         title: "Player Celebrates with Victory Dance",
                         description: "Celebrate a well-deserved win with fun and energetic victory dances.",
-                        media: { type: "video", src: "Assets/AllRecording/TrackGame-2.mp4" }
+                        media: { type: "video", src: "Assets/AllRecording/TrackGame-2.mp4" },
+                        descriptionDev: "When the player crosses the finish line (dolly track reaching its end position), a victory animation is triggered, and a dance sequence plays. The celebration is tied to the player's rank, with different animations triggered for 1st, 2nd, and 3rd positions. Customizable victory dances can be added for player variation."
                     },
                     {
                         title: "Sportsmanship and Stamina Balance",
                         description: "Master the art of balancing stamina and maintaining good sportsmanship.",
-                        media: { type: "image", src: "Assets/trackGame/5.jpg" }
+                        media: { type: "image", src: "Assets/trackGame/5.jpg" },
+                        descriptionDev: "Stamina is a key mechanic that dynamically affects the player's speed. Tapping increases speed but depletes stamina, while pausing regenerates stamina. If stamina reaches zero, the player slows down dramatically. Players must balance tapping frequency to maintain optimal speed without running out of stamina."
                     }
                 ]
             }
 
+
         };
 
         let selectedCard = null;
+        let isDevMode = false; // Track mode (NOR by default)
 
         function loadGameCards() {
             const gameGrid = document.getElementById("game-grid");
@@ -632,13 +720,16 @@
                     duration-200 hover:-translate-y-1 hover:shadow-xl border-4 border-transparent flex flex-col justify-between 
                     w-[180px] h-[240px] sm:w-[180px] sm:h-[240px] md:w-[240px] md:h-[300px] mx-auto`;
 
+                gameCard.setAttribute("data-key", key); // Set game key to the card
+                gameCard.onc
                 gameCard.innerHTML = `
-                    <a href="#titleHD">
+                    <a href="#">
                         <img src="${game.image.src}" alt="${game.title}" 
                             class="w-full h-[120px] sm:h-[140px] md:h-[160px] object-cover rounded-lg mb-2">
                         <h3 class="mt-auto text-sm sm:text-base font-semibold text-gray-800 ">${game.title}</h3>
                     </a>
                 `;
+
                 gameCard.onclick = () => loadGameSections(gameCard, key);
                 gameGrid.appendChild(gameCard);
             }
@@ -654,14 +745,14 @@
             // Add game title at the top with reduced size
             const gameTitle = document.createElement("div");
             gameTitle.className = "text-center my-8";
-            gameTitle.id = "titleHD";
             gameTitle.innerHTML = `
                 <h2 class="text-5xl md:text-7xl font-bold text-white transition-transform transform duration-300 hover:scale-105 hover:text-yellow-300" 
                     style="font-family: 'Caveat Brush', cursive;">
                     ${game.title}
                 </h2>
                 <a href="${game.downloadLink}">
-                    <button class="relative overflow-hidden px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition-all duration-300 group hover:bg-transparent mt-10" style="background-color: rgb(0, 102, 165)" >
+                    <button class="relative overflow-hidden px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition-all duration-300 group hover:bg-transparent mt-10" 
+                        style="background-color: rgb(0, 102, 165)">
                         <span class="relative z-10">Download</span>
                         <div class="absolute inset-0 bg-black transition-all duration-300 scale-0 group-hover:scale-100 rounded-lg"></div>
                     </button> 
@@ -678,10 +769,8 @@
                     ${isOdd ? "md:flex-row-reverse" : ""}`; // Reverse content on odd sections
 
                 // Styling adjustments for margins and paddings
-                sectionDiv.style.margin = "2rem auto"; // Centered with top and bottom margins
-                sectionDiv.style.padding = "2rem"; 
+                sectionDiv.style.padding = "2rem";
                 sectionDiv.style.borderTop = "4px solid #ffffff";
-
 
                 sectionDiv.innerHTML = `
                     <!-- Left or Right Content (Text) -->
@@ -693,21 +782,21 @@
 
                         <p class="mt-4 md:mt-6 text-base md:text-lg font-bold text-gray-100 leading-relaxed transition-all duration-300 hover:scale-105"
                             style="width: 50%; font-family: 'Fredoka', sans-serif;">
-                            ${section.description}
+                            ${isDevMode ? section.descriptionDev : section.description}
                         </p>
                     </div>
 
                     <!-- Left or Right Media (Image or Video) -->
                     <div class="w-full md:w-1/2 flex items-center justify-center">
                         ${section.media.type === "image" ?
-                            `<img src="${section.media.src}" alt="${section.title}" 
+                        `<img src="${section.media.src}" alt="${section.title}" 
                                 class="rounded-lg transform transition duration-300 hover:scale-105"
                                 style="width: 90%; max-width: 480px; height: auto;">`
-                            :
-                            `<video src="${section.media.src}"
+                        :
+                        `<video src="${section.media.src}"
                                 class="rounded-lg w-full max-w-[480px] h-auto sm:w-[320px] sm:h-[180px] md:w-[480px] md:h-[270px] lg:w-[640px] lg:h-[360px]" 
                                 autoplay loop muted></video>`
-                        }
+                    }
                     </div>
                 `;
                 sectionContainer.appendChild(sectionDiv);
@@ -721,22 +810,49 @@
             selectedCard = gameCard;
         }
 
-
         document.addEventListener("DOMContentLoaded", loadGameCards);
-        // Function to get query parameter by name
+
+        // Get query parameter by name
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
 
+        // Load game sections dynamically based on URL parameter
         document.addEventListener("DOMContentLoaded", () => {
-            const gameKey = getQueryParam("game"); // Get 'game' parameter from URL
+            const gameKey = getQueryParam("game");
             if (gameKey && games[gameKey]) {
-                loadGameSections(null, gameKey); // Load the game sections dynamically
+                loadGameSections(null, gameKey);
             } else {
                 console.error("Invalid game key or no game selected.");
             }
         });
+
+        // Toggle between DEV and NOR modes
+        const modeToggle = document.getElementById("modeToggle");
+        const toggleText = document.querySelector(".toggle-text");
+
+        modeToggle.addEventListener("change", () => {
+            isDevMode = modeToggle.checked; // Switch mode based on toggle
+            toggleText.textContent = isDevMode ? "DEV" : "NOR";
+
+            // Change background color of game-section-container based on mode
+            const sectionContainer = document.getElementById("game-section-container");
+            sectionContainer.style.backgroundColor = isDevMode ? "#000" : "rgb(0, 128, 255)";
+
+            // Reload selected game sections if a game is selected
+            if (selectedCard) {
+                const gameKey = selectedCard.getAttribute("data-key");
+                loadGameSections(selectedCard, gameKey);
+            }
+        });
+
+
+        function showToggle() {
+            var toggleContainer = document.getElementById('toggle-container');
+            toggleContainer.style.display = 'block';
+        }
+
     </script>
 
 </body>
