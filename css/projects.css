@@ -1,9 +1,8 @@
 /* Toggle Container */
 .toggle-container {
     display: none; /* Or block depending on layout */
-    position: absolute;
-    top: 10rem;
-    left: 90vw;
+    position: relative;
+    right: 10%;
     z-index: 10;
 }
 
@@ -17,7 +16,8 @@
   .toggle-label {
     display: flex;
     align-items: center;
-    background-color: #ccc;
+    background-color: #1f2223;
+    border: 1px solid #ccc;
     border-radius: 30px;
     position: relative;
     cursor: pointer;
@@ -51,3 +51,7 @@
     background-color: rgb(13, 255, 0); /* Change circle background when ON */
     color: white; /* Change text color */
   }
+.mainfooter
+{
+  background-color: #1f2223;
+}

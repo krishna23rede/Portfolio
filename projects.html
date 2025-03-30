@@ -94,6 +94,7 @@
     🌟 NAVBAR SECTION END
     ==================================== -->
 
+    
 
 
 
@@ -116,20 +117,20 @@
     </div>
 
     <!-- DEV MODE Button-->
-    <div class="toggle-container">
-        <input type="checkbox" id="modeToggle" class="toggle-input">
-        <label for="modeToggle" class="toggle-label">
-            <span class="toggle-text text-center" style="padding: 10px 20px 10px 20px;">NOR</span>
-        </label>
-    </div>
-
+    
     <!-- ================================
     🌟 FOOTER SECTION START
     ==================================== -->
-    <footer class="bg-gray-900 text-white py-8" id="mainfooter">
+    <footer class="text-white py-8" id="mainfooter">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="toggle-container">
+                <input type="checkbox" id="modeToggle" class="toggle-input">
+                <label for="modeToggle" class="toggle-label">
+                    <span class="toggle-text text-center" style="padding: 10px 20px 10px 20px;">NORM</span>
+                </label>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-
+                
                 <!-- Column 1: Portfolio Info -->
                 <div>
                     </button>
@@ -808,9 +809,9 @@
 
             // Highlight the selected card
             if (selectedCard) {
-                selectedCard.classList.remove("border-blue-500");
+                selectedCard.classList.remove("border-red-500");
             }
-            gameCard.classList.add("border-blue-500");
+            gameCard.classList.add("border-red-500");
             selectedCard = gameCard;
         }
 
