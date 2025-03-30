@@ -1,11 +1,10 @@
 /* Toggle Container */
 .toggle-container {
-    display: inline-block; /* Or block depending on layout */
+    display: none; /* Or block depending on layout */
     position: absolute;
     top: 10rem;
     left: 90vw;
     z-index: 10;
-    background-color: transparent; /* Remove any inherited background */
 }
 
   
@@ -52,9 +51,3 @@
     background-color: rgb(13, 255, 0); /* Change circle background when ON */
     color: white; /* Change text color */
   }
-
-
-
-  #game-section-container {
-    border: 1px solid red;
-}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
@@ -95,9 +95,8 @@
     <!-- ================================
     🎨 HERO SECTION START
     ==================================== -->
-
     <div class="w-full h-auto md:h-[calc(75vh*1.01)] bg-tile-animation-LeftDown"
-        style="background-image: url('Assets/download.png');">
+        style="background-image: url('Assets/download.png'); border-bottom: 10px solid #1f2223;">
 
         <div class="flex flex-col md:flex-row items-center justify-between h-full px-1 md:px-12 py-8 md:py-0"
             id="section1">
@@ -117,14 +116,14 @@
                 </p>
 
             </div>
-
+            
             <!-- Right Image -->
             <div class="w-full md:w-1/2 flex items-center justify-center">
                 <img src="Assets/Avatar_2.png" alt="Big Image"
-                    class="rounded-lg transform transition duration-300 hover:scale-105"
-                    style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
+                class="rounded-lg transform transition duration-300 hover:scale-105"
+                style="width: 45%; max-width: 38rem; height: auto; background-color: none;">
             </div>
-
+            
         </div>
     </div>
 
@@ -161,10 +160,14 @@
                     next cool idea. I’m all about creativity, challenges, and bringing ideas to life!
                 </p>
                 <a href="about.html">
-                    <button class="relative overflow-hidden px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition-all duration-300 group hover:bg-transparent mt-10" style="background-color: rgb(0, 102, 165)" >
+                    <button
+                        class="relative overflow-hidden px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition-all duration-300 group hover:bg-transparent mt-10"
+                        style="background-color: rgb(0, 102, 165)">
                         <span class="relative z-10">Explore More</span>
-                        <div class="absolute inset-0 bg-black transition-all duration-300 scale-0 group-hover:scale-100 rounded-lg"></div>
-                    </button> 
+                        <div
+                            class="absolute inset-0 bg-black transition-all duration-300 scale-0 group-hover:scale-100 rounded-lg">
+                        </div>
+                    </button>
                 </a>
             </div>
 

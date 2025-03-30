@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Gallery</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
@@ -114,13 +114,14 @@
             </div>
         </div>
     </div>
-    <span class="toggle-container" style="display: bl;">
+
+    <!-- DEV MODE Button-->
+    <div class="toggle-container">
         <input type="checkbox" id="modeToggle" class="toggle-input">
         <label for="modeToggle" class="toggle-label">
-            <span class="toggle-text text-center" style="padding: 20px;">NOR</span>
+            <span class="toggle-text text-center" style="padding: 10px 20px 10px 20px;">NOR</span>
         </label>
-    </span>
-
+    </div>
 
     <!-- ================================
     🌟 FOOTER SECTION START
@@ -131,6 +132,7 @@
 
                 <!-- Column 1: Portfolio Info -->
                 <div>
+                    </button>
                     <h3 class="text-2xl font-bold">PortFolio</h3>
                     <p class="text-sm mt-1 text-gray-400">© 2025 All Rights Reserved.</p>
                 </div>
@@ -724,9 +726,11 @@
                 gameCard.onc
                 gameCard.innerHTML = `
                     <a href="#">
+                        <button onclick="showToggle()";>
                         <img src="${game.image.src}" alt="${game.title}" 
                             class="w-full h-[120px] sm:h-[140px] md:h-[160px] object-cover rounded-lg mb-2">
                         <h3 class="mt-auto text-sm sm:text-base font-semibold text-gray-800 ">${game.title}</h3>
+                        </button>
                     </a>
                 `;
 
@@ -827,14 +831,18 @@
                 console.error("Invalid game key or no game selected.");
             }
         });
-
+        function showToggle() {
+            const toggleContainer = document.querySelector(".toggle-container");
+            toggleContainer.style.display = "inline-block";
+            console.log("Called Sow toggle");
+        }
         // Toggle between DEV and NOR modes
         const modeToggle = document.getElementById("modeToggle");
         const toggleText = document.querySelector(".toggle-text");
 
         modeToggle.addEventListener("change", () => {
             isDevMode = modeToggle.checked; // Switch mode based on toggle
-            toggleText.textContent = isDevMode ? "DEV" : "NOR";
+            toggleText.textContent = isDevMode ? "DEV" : "NORM";
 
             // Change background color of game-section-container based on mode
             const sectionContainer = document.getElementById("game-section-container");
@@ -846,12 +854,6 @@
                 loadGameSections(selectedCard, gameKey);
             }
         });
-
-
-        function showToggle() {
-            var toggleContainer = document.getElementById('toggle-container');
-            toggleContainer.style.display = 'block';
-        }
 
     </script>
 
